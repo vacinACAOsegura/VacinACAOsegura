@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="quiz.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <div class="logo">
+                <img src="../Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="../calendario.html">Calendário</a>
+            <a href="../tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="../esavi.html">ESAVI</a>
+            <a href="../sistema_info.html">Sistema de Registro</a>
+            <a href="quiz.html">QUIZ</a>
+            <a href="../index.html#contato">Contato</a>
+            <a href="../sobre.html">Sobre</a>
+        </div>
+    </nav>
+<div class="quiz-container-niveis" id="quiz">
+    <h1>Quiz</h1>
+    <h2 class="sub-titulo">Após aproveitar o conteúdo do site chegou a hora de testar os seus conhecimentos!</h2>
+    
+    
+        <div id="card-basico"  class="service-box">
+            <h3 class="niveis-text">Teste de nivel básico</h3>
+            <button class="butao">Acesse aqui!</button>
+        </div>
+        <div id="card-intermediario"  class="service-box">
+            <h3 class="niveis-text">Teste de nivel intermediario</h3>
+            <button class="butao">Acesse aqui!</button>
+        </div>
+        <div id="card-avancado"  class="service-box">
+            <h3 class="niveis-text">Teste de nivel avançado</h3>
+            <button class="butao">Acesse aqui!</button>
+        </div>
+</div>
+
+<script>
+
+    const toggleButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    toggleButton.addEventListener('click', () => {
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    document.getElementById("card-basico").onclick = function() {
+        window.location.href = "basico.html";
+    };
+    document.getElementById("card-intermediario").onclick = function() {
+        window.location.href = "intermediario.html";
+    };
+    document.getElementById("card-avancado").onclick = function() {
+        window.location.href = "avancado.html";
+    };
+
+</script>
+   
+
+</body>
+</html>

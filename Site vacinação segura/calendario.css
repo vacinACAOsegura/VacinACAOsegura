@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 60px;
+    background-color: #d2e7d2;
+}
+
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      background-color: #f7f7f7;
+      padding: 10px 20px;
+      width: 100%;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      top: 0;
+      left: 0;
+      z-index: 1000;
+  }
+  .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+  }
+  .navbar .menu {
+      display: flex;
+      gap: 20px;
+      margin-right: 30px;
+  }
+  .navbar .menu a {
+      text-decoration: none;
+      color: #222222;
+      font-size: 16px;
+  }
+  .navbar .menu a:hover {
+      color: #c5c510;
+  }
+  .navbar .auth-buttons {
+      display: flex;
+      gap: 10px;
+  }
+
+  .menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fffdfdee; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.calendar-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #252525ea;
+}
+
+.more-info-button {
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    margin-bottom: 30px;
+}
+.more-info-button button {
+    background-color: #1f419a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.calendar-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.calendar-box, .calendar-box-especiais {
+    width: 30%;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #222222;
+}
+
+.calendar-box h3, .calendar-box-especiais h3 {
+    margin: 15px 0;
+    font-size: 20px;
+    color: #f1f1f1;
+}
+
+.calendar-box button, .calendar-box-especiais button {
+    background-color: #1f211f7e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block; 
+    margin-right: 40px;
+  }
+
+  .navbar .menu {
+    display: none;
+    flex-direction: column; 
+    gap: 10px; 
+    background-color: #fff; 
+    position: absolute; 
+    top: 60px; 
+    right: 10px; 
+    border: 1px solid #ccc;
+    padding: 10px; 
+    z-index: 1000;
+    
+  }
+
+  .navbar .menu a {
+    width: 100%; 
+    padding: 10px;
+    text-align: left; 
+  }
+}
+
+@media (min-width: 701px) {
+  .navbar .menu {
+    display: flex !important; 
+    flex-direction: row; 
+  }
+
+  .menu-toggle {
+    display: none; 
+    margin-right: 30px;
+  }
+}

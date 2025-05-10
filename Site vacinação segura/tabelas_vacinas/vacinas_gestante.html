@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacinas - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="gestante.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <div class="logo">
+                <img src="../Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="../calendario.html">Calendário</a>
+            <a href="../tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="../esavi.html">ESAVI</a>
+            <a href="../sistema_info.html">Sistemas de informações</a>
+            <a href="../quiz/quiz.html">QUIZ</a>
+            <a href="../index.html#contato">Contato</a>
+            <a href="../sobre.html">Sobre</a>
+        </div>
+    </nav>
+    <div class="table-container">
+        <table>
+            <div id="info_adcionais" class="info-button">
+                <button>Mais informações sobre as vacinas</button>
+            </div>
+            <h1>Calendário de Vacinação para Gestantes</h1>
+            <thead>
+                <tr>
+                    <th>Vacina</th>
+                    <th>Proteção Contra</th>
+                    <th>Composição</th>
+                    <th>Esquema básico</th>
+                    <th>Reforço</th>
+                    <th>Idade Recomendada</th>
+                    <th>Intervalo recomendado</th>
+                    <th>Intervalo minímo</th>
+                    <th>Volume da Dose</th>
+                    <th>Via de Administração</th>
+                    <th>Local da Aplicação</th>
+                    <th>Agulha Hipodérmica Recomendada (dec/mm)</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hepatite B recombinante</td>
+                    <td>Hepatite B</td>
+                    <td>Antígeno recombinante de superfície do vírus purificado</td>
+                    <td>3 doses (Iniciar ou completar o esquema, de acordo com situação vacinal, independentemente da idade gestacional)</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>2ª dose: 1 mês após 1ª, 3ª dose: 6 meses após 1ª dose</td>
+                    <td>2° dose: mês após 1ª dose, 3° dose: 4 meses após a 1° dose</td>
+                    <td>0,5mL ou 1mL a depender do fabricante e/ou da idade que será administrada</td>
+                    <td>Intramuscular</td>
+                    <td>Músculo deltoide, ventroglúteo e vasto lateral da coxa</td>
+                    <td>20x5,5<br>25x6<br>25x7</td>
+                </tr>
+                <tr>
+                    <td>Difteria e Tétano (dTpa adulto)</td>
+                    <td>Difteria e Tétano</td>
+                    <td>Toxoides diftérico e tetânico</td>
+                    <td>3 doses (Iniciar ou completar o esquema, de acordo com situação vacinal)</td>
+                    <td>A cada 10 anos. Em caso de ferimentos graves a cada 5 anos</td>
+                    <td>-</td>
+                    <td>60 dias</td>
+                    <td>30 dias</td>
+                    <td>0,5mL</td>
+                    <td>Intramuscular</td>
+                    <td>Músculo deltoide, vasto lateral da coxa, dorsoglúteo ou ventroglúteo</td>
+                    <td>20x5,5<br>25x6<br>25x7</td>
+                </tr>
+                <tr>
+                    <td>Difteria, Tétano, Pertussis acelular (dTpa adulto)</td>
+                    <td>Difteria, Tétano e Coqueluche</td>
+                    <td>Toxoides diftérico e tetânico purificados e bactéria de coqueluche, inativada</td>
+                    <td>1 dose para gestante a partir da 20ª semana de gravidez</td>
+                    <td>1 dose a cada gestação</td>
+                    <td>-</td>
+                    <td>60 dias após dT</td>
+                    <td>30 dias após dT</td>
+                    <td>0,5mL</td>
+                    <td>Intramuscular</td>
+                    <td>Músculo deltoide, vasto lateral da coxa, dorsoglúteo ou ventroglúteo</td>
+                    <td>20x5,5<br>25x6<br>25x7</td>
+                </tr>
+                <tr>
+                    <td>Covid-19 Monovalente XBB</td>
+                    <td>Covid-19</td>
+                    <td>Proteína spike RNAm</td>
+                    <td>2 doses com intervalo de 6 meses entre elas</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>2 doses com intervalo de 6 meses entre elas</td>
+                    <td>-</td>
+                    <td>0,5mL</td>
+                    <td>Intramuscular</td>
+                    <td>Músculo deltoide, ventroglúteo ou dorsoglúteo e vasto lateral da coxa</td>
+                    <td>20x5,5<br>25x6<br>25x7</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+});
+
+        document.getElementById("info_adcionais").onclick = function() {
+        window.location.href = "../info_adicionais.html";
+        };
+   </script>
+</body>
+</html>

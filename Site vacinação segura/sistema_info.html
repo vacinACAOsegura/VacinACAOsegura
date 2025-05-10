@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Informação - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="sistema_info.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">
+            <div class="logo">
+                <img src="Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="calendario.html">Calendário</a>
+            <a href="tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="esavi.html">ESAVI</a>
+            <a href="sistema_info.html">Sistemas de informações</a>
+            <a href="quiz/quiz.html">QUIZ</a>
+            <a href="index.html#contato">Contato</a>
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1 class="title">Sistema de Informação Sobre Vacinação</h1>
+
+        <div class="text-section">
+            <div class="column">
+                <p>O sistema de informação constitui-se em uma ferramenta fundamental para subsidiar as ações de planejamento, acompanhamento e avaliação das atividades de vacinação por meio do registro de doses aplicadas na população-alvo, além de permitir a análise da situação vacinal por gestores federal, estaduais, regionais e municipais.</p>
+               
+                <p>Assim, é importante que todas as salas de vacinas utilizem os Sistemas de Informação credenciados pelo Ministério da Saúde, com registro nominal e por procedência do vacinado. O registro no sistema de informação de cada dose de vacina aplicada, tem importância fundamental para obtenção de informações oportunas e de qualidade.</p>
+               
+                <p>É imprescindível que as normas de registro sejam respeitadas para evitar erros que comprometam a avaliação da situação vacinal da população.</p>
+   
+            </div>
+            <div class="column">
+              <P>Os dados digitados nominalmente nos sistemas de informação devem ser transmitidos à Rede Nacional de Dados em Saúde (RNDS). para promover a troca de informações entre os pontos da Rede de Atenção à Saúde, permitindo a transição e a continuidade do cuidado nos setores públicos e privados.</p>
+                <p>Para auxiliar no planejamento das ações, o sistema disponibiliza os relatórios de lista de aprazamentos, lista de faltosos e lista de esquemas incompletos. Para o registro de doses de vacinas aplicadas em campanhas de vacinação e no Monitoramento Rápido da Cobertura Vacinal (MRC), são disponibilizados módulos específicos para cada grupo-alvo, sendo possível também, registrar as doses aplicadas no sistema nominal, individualmente, seguindo as recomendações do Informe Técnico de cada campanha ou MRC no que concerne às orientações para o registro de doses aplicadas.</p>
+                
+              </div>  
+        </div>
+        <div class="faq">
+          <div class="faq-item">
+              <div class="faq-title" onclick="toggleCard(this)">
+                <span>
+                    SI-PNI - Sistema de Informação do Programa Nacional de Imunização
+                </span>
+                <span class="icon">+</span>
+              </div>
+              <div class="faq-content">
+                <div class="card-back">
+                  <div class="text-content">
+                    <p class="explanation-part">O Programa Nacional de Imunizações - PNI existe desde 1973, por determinação do Ministério da Saúde, tendo sido formalmente instituído por meio da Lei nº 6.259, de 30 de outubro de 1975 e regulamentado pelo Decreto nº. 78.231, de 30 de dezembro de 1976, quando o Programa passou a coordenar a Política Nacional de Imunizações, programa de ação pública fundamental para o Sistema Único de Saúde (SUS) em seu caráter mais amplo e democrático, conforme prevê a Constituição de 1988. </p>
+                    <p class="explanation-part">O PNI é responsável por definir a política de vacinação do país, desde a definição do Calendário Nacional de Vacinação (CNV) até a aquisição dos imunobiológicos e sua disponibilização nas salas de vacinação da rede pública — mais de 38 mil serviços de saúde —, inclusive com o estabelecimento de normas e diretrizes sobre as indicações e recomendações da vacinação em todo o território nacional.<br>
+                        Em meio século de existência, o PNI passou de quatro para mais de 48 imunobiológicos (entre vacinas, soros e imunoglobulinas) ofertados para toda a população, gratuitamente, para a prevenção, o controle e/ou eliminação de doenças imunopreveníveis. 
+                    </p>
+                    <p class="explanation-part">O objetivo fundamental do SI-PNI é possibilitar aos gestores envolvidos no programa uma avaliação dinâmica do risco quanto à ocorrência de surtos ou epidemias, a partir do registro dos imunos aplicados e do quantitativo populacional vacinado, que são agregados por faixa etária, em determinado período de tempo, em uma área geográfica. Por outro lado, possibilita também o controle do estoque de imunos necessário aos administradores que têm a incumbência de programar sua aquisição e distribuição.
+                    </p>
+                  </div>
+                  <div class="navigation-buttons">
+                    <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+                    <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+        </div>
+          <div class="faq">
+            <div class="faq-item">
+              <div class="faq-title" onclick="toggleCard(this)">
+                <span>SIES - Sistema de Insumos Estratégicos</span>
+                <span class="icon">+</span>
+              </div>
+              <div class="faq-content">
+                <div class="card-back">
+                  <div class="text-content">
+                    <p class="explanation-part">O Sistema de Insumos Estratégicos – SIES é um aplicativo demandado pela Coordenação-Geral de Insumos Estratégicos-CGIES, do Departamento de Administração, que estabeleceu o fluxo dos procedimentos e forneceu os dados necessários ao seu desenvolvimento. <br>
+                      Foi criado em 2002 pelo DATASUS, é uma ferramenta WEB para gestão, análise, controle e movimentação dos insumos estratégicos, que para o Programa de Imunização são: vacinas, soros e imunoglobulinas.
+                      </p>
+                    <p class="explanation-part">Toda e qualquer movimentação dos insumos estratégicos utilizados no Programa de Imunização deverá ser realizado via sistema. <br>
+                      Possui 04 níveis hierárquicos, conforme representado no esquema a seguir: municipal/ regional estadual/ nível central SES/ Ministério da Saúde.<br>
+                      Cada município deverá ter cadastrado pelo menos um responsável para sua operação, bem como deverá haver no mínimo um representante no nível regional, que deverão fazer análise, programação e solicitações aos níveis hierárquicos imediatamente superiores.
+                      </p>
+                    <p class="explanation-part">Tem como objetivo aprimorar o abastecimento de insumos estratégicos, por meio da gestão eficiente dos processos de recebimento, distribuição e acompanhamento de estoque dos insumos estratégicos providos pela Secretaria de Estado da Saúde.
+                      O site oficial do SIES é <a href="http://sies.saude.gov.br" target="_blank">http://sies.saude.gov.br</a>, ao abrir pagina para fazer o login, deve-se selecionar a ícone “Ferramentas” na página do navegador, selecionar “Configurações do Modo de Exibição e Compatibilidade”. 
+                    </p>
+                    <p class="explanation-part">Após digitação de usuário, senha e clicando no botão “OK”, abrirá a tela do menu principal do sistema, com todos os acessos às outras telas que lhe são permitidos, conforme sua senha. Esses acessos variam de acordo com a participação que o usuário tem no processo dos insumos estratégicos. Note que aparecerá o nome do cadastrado e da entidade que ele representa, além de algumas outras opções de entrada.
+                    </p>
+                  </div>
+                  <div class="navigation-buttons">
+                    <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+                    <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+          <div class="faq">
+            <div class="faq-item">
+              <div class="faq-title" onclick="toggleCard(this)">
+                <span>E-SUS NOTIFICA</span>
+                <span class="icon">+</span>
+              </div>
+              <div class="faq-content">
+                <div class="card-back">
+                  <div class="text-content">
+                    <p class="explanation-part">A partir da necessidade de desenvolver um sistema on-line, com acesso imediato dos dados registrados e que fosse capaz de suportar o volume de registros gerados em todo o território nacional, foi desenvolvido o e-SUS Notifica, inicialmente denominado e-SUS Vigilância Epidemiológica (e-SUS VE), para a notificação de casos de síndrome gripal suspeitos de covid-19 em todo o território brasileiro.
+                    </p>
+                    <p class="explanation-part"> O e-SUS Notifica foi lançado em 27 de março de 2020 e incorporou as notificações legadas do formulário anterior, bem como as notificações provenientes de planilhas de controle dos casos e sistemas próprios, desenvolvidos por alguns estados e municípios. A implementação do e-SUS Notifica conferiu maior celeridade e oportunidade no acesso aos dados registrados para a análise e divulgação das informações por todas as esferas de gestão do SUS, além de possibilitar a interoperabilidade com outros sistemas de informação.</p>
+                    <p class="explanation-part">O acesso ao e-SUS Notifica ocorre por meio do endereço eletrônico: <a href="//notifica.saude.gov.br/login" target="_blank">https://notifica.saude.gov.br/login</a>. Para acessar o sistema, o usuário deve inicialmente passar pela autenticação na plataforma gov.br, a qual faz parte de um projeto de unificação dos canais digitais do governo federal. Assim, o usuário poderá acessar o sistema ao clicar em “Entrar com gov.br”, sendo redirecionado para a página da plataforma.
+                    </p>
+                    <p class="explanation-part">
+                      Existem quatro perfis de usuário no e-SUS Notifica: Autocadastro, Gestor Municipal, Gestor Estadual e Gestor Federal. A habilitação dos perfis no sistema ocorre de forma hierárquica.  O perfil Autocadastro é o perfil de entrada para qualquer usuário, cujo acesso é fornecido automaticamente após a entrada com o uso do gov.br. Por outro lado, os perfis de Gestor necessitam de aprovação de um outro gestor do mesmo nível ou de um nível superior, de acordo com a sua área de abrangência. Dessa forma, gestores municipais podem habilitar outros gestores municipais em seus respectivos municípios de atuação. Do mesmo modo, gestores estaduais habilitam outros Gestores Estaduais que trabalham no mesmo estado de abrangência.
+                    </p>
+                  </div>
+                  <div class="navigation-buttons">
+                    <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+                    <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+          <div class="faq">
+            <div class="faq-item">
+              <div class="faq-title" onclick="toggleCard(this)">
+                <span>Estratégia e-SUS Atenção Primária à Saúde (APS)</span>
+                <span class="icon">+</span>
+              </div>
+              <div class="faq-content">
+                <div class="card-back">
+                  <div class="text-content">
+                    <p class="explanation-part">O e-SUS APS é uma estratégia da Secretaria de Atenção Primária (SAPS) para reestruturar as informações da Atenção Primária à Saúde (APS) em nível nacional. Esta ação está alinhada com a proposta mais geral de reestruturação dos Sistemas de Informação em Saúde (SIS) do Ministério da Saúde (MS), entendendo que a qualificação da gestão da informação é fundamental para ampliar a qualidade no atendimento à população.
+                   </p>
+                    <p class="explanation-part">A Estratégia e-SUS APS faz referência ao processo de informatização qualificada do Sistema Único de Saúde (SUS) em busca de um SUS eletrônico (e-SUS) e tem como objetivo concretizar um novo modelo de gestão de informação que apoie os municípios e os serviços de saúde na gestão efetiva da APS e na qualificação do cuidado dos usuários.<br> 
+                      <br>Esse modelo nacional de gestão da informação na APS é definido a partir de diretrizes e requisitos essenciais que orientam e organizam o processo de reestruturação desse SIS, instituindo-se o Sistema de Informação em Saúde para a Atenção Básica (SISAB), por meio da Portaria GM/MS Nº 1.412, de 10 de julho de 2013, e a Estratégia e-SUS APS para sua operacionalização.
+                    </p>
+                    <p class="explanation-part">A Estratégia e-SUS APS preconiza: <br>
+                      - Identificar e Individualizar o registro: registro individualizado das informações em saúde e identificado, por meio do Cadastro de Pessoas Físicas (CPF) ou Cartão Nacional de Saúde (CNS), para o acompanhamento dos atendimentos aos cidadãos;<br>
+                      - Integrar a informação por meio da Rede Nacional de Dados em Saúde (RNDS): integrar a RNDS enviando dados em saúde, a partir de modelos de informações padronizados;
+                      
+                    </p>
+                    <p class="explanation-part">- Reduzir o retrabalho na coleta de dados: reduzir a necessidade de registrar informações similares em mais de um instrumento (fichas/sistemas) ao mesmo tempo; <br>
+                      - Informatizar as unidades: desenvolvimento de soluções tecnológicas que contemplem os processos de trabalho da APS, com recomendações de boas práticas e o estímulo à informatização dos serviços de saúde por meio do Programa Informatiza APS;
+                      </p>
+                    <p class="explanation-part">- Qualificar os dados em saúde: promover a qualificação da entrada dos dados em saúde por meio da padronização das terminologias e adoção de metodologias de registro clínico.<br>
+                      - Gestão do cuidado: introdução de novas tecnologias para otimizar o trabalho dos profissionais na perspectiva de realizar a gestão do cuidado;<br>
+                      - Coordenação do cuidado: otimizar o uso da informação na gestão e no cuidado em saúde na perspectiva de integração dos serviços de saúde.
+                      </p>
+                    <p class="explanation-part">A estratégia é composta por dois grandes SIS, um para o armazenamento dos dados e outro para a coleta de dados, sendo respectivamente:<br> 
+                      - SISAB, sistema de informação nacional vigente para o processamento e a disseminação de dados e informações relacionadas a APS, com a finalidade de construção do conhecimento e tomada de decisão para as três esferas de gestão. Além disso, corrobora para fins de financiamento e de adesão aos programas e estratégias da Política Nacional de Atenção Básica (PNAB). <br>
+                      - Sistema e-SUS APS, composto por dois softwares e quatro aplicativos para coleta dos dados:
+                      </p>
+                    <p class="explanation-part">* Sistema com Coleta de Dados Simplificada (CDS): sistema de transição/contingência, que apoia o processo de coleta de dados por meio de fichas e um sistema de digitação;<br>
+                      * Sistema com Prontuário Eletrônico do Cidadão (PEC): sistema com prontuário eletrônico (objeto deste manual), que tem como principal objetivo apoiar o processo de informatização das UBS.<br>
+                      * Aplicativo e-SUS Território (e-SUS Território), e-SUS Atividade Coletiva (e-SUS AC) e e-SUS Vacinação:  aplicativos móveis e offline que auxiliam os profissionais na coleta de dados no território, na coleta de dados das atividades coletivas, na coleta de dados de vacinas aplicadas realizadas pela equipe fora da unidade básica de saúde, respectivamente. Há ainda o e-SUS Gestão que subsidia o gestor municipal e local com as informações das atividades realizadas pelas equipes.
+                      </p>
+                  </div>
+                  <div class="navigation-buttons">
+                    <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+                    <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="sistema_infor.js"></script>
+</body>
+</html>

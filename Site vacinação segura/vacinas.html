@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="vacinas.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">
+        <div class="logo">
+            <img src="Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+        </div>
+        </a>
+        <div class="menu">
+            <a href="calendario.html">Calendário</a>
+            <a href="tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="esavi.html">ESAVI</a>
+            <a href="sistema_info.html">Sistema de Registro</a>
+            <a href="quiz/quiz.html">QUIZ</a>
+            <a href="index.html#contato">Contato</a>
+        </div>
+    </nav>
+    
+    <h1 id="titulo-vacina">Vacinas</h1>
+    <div id="info_adcionais" class="info-button">
+        <button>Mais informações sobre as vacinas</button>
+    </div>
+    
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const faixa = urlParams.get("faixa");
+
+            const tituloVacina = document.getElementById("titulo-vacina");
+            const imagemVacina = document.getElementById("imagem-vacina");
+
+            if (faixa === "crianca") {
+                tituloVacina.textContent = "Vacinas para Criança"; 
+                window.location.href = "tabelas_vacinas/vacinas_criancas.html";
+                seta.style.display = "block"; 
+                seta.addEventListener("click", function() { 
+                    if (window.location.href .includes("vacinas_crianca1.png")) {
+                        window.location.href = "vacinas_crianca2.png";
+                    } else { window.location.href  = "vacinas_crianca1.png"; 
+                    } 
+                });
+            } else if (faixa === "adolescente") {
+                tituloVacina.textContent = "Vacinas para Adolescente";
+                window.location.href = "tabelas_vacinas/vacinas_adolescentes.html";
+            } else if (faixa === "adulto") {
+                tituloVacina.textContent = "Vacinas para Adulto e Idoso";
+                window.location.href  = "tabelas_vacinas/vacinas_adulto.html";
+            } else if (faixa === "gestante") {
+                tituloVacina.textContent = "Vacinas para Gestante";
+                window.location.href  = "tabelas_vacinas/vacinas_gestante.html";
+            } else {
+                tituloVacina.textContent = "Vacinas Especiais";
+                 window.location.href = "tabelas_vacinas/casos_especiais.html"
+            }
+        });
+            document.getElementById("info_adcionais").onclick = function() {
+            window.location.href = "tabelas_vacinas/casos_especiais.html";
+        };
+
+    </script>
+</body>
+</html>

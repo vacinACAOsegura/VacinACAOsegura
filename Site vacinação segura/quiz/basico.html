@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="quiz.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <div class="logo">
+                <img src="../Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="../calendario.html">Calendário</a>
+            <a href="../tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="../esavi.html">ESAVI</a>
+            <a href="../sistema_info.html">Sistema de Registro</a>
+            <a href="quiz.html">QUIZ</a>
+            <a href="../index.html#contato">Contato</a>
+            <a href="../sobre.html">Sobre</a>
+        </div>
+    </nav>
+    
+<div class="quiz-container" id="quiz"></div>
+
+<div id="score"></div>
+
+<div class="buttons">
+    <button class="finish-btn" onclick="finishQuiz()">Finalizar</button>
+    <button class="retry-btn" onclick="retryQuiz()">Refazer</button>
+</div>
+
+<div class="info-bubble" id="infoBubble">
+    <h4>Explicação</h4>
+    <p id="infoText">Aqui aparecerá a explicação.</p>
+    <button onclick="closeBubble()">Fechar</button>
+</div>
+
+<script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    toggleButton.addEventListener('click', () => {
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+   
+    const quizData = [
+        {
+            question: "1) Qual é a principal finalidade das vacinas?",
+            options: ["Tratar doenças já instaladas", "Prevenir doenças infecciosas", "Aliviar sintomas de doenças crônicas", "Substituir antibióticos", "Aumentar a resistência física"],
+            answer: 1, 
+            explanation: `Prevenir doenças infecciosas
+Comentário: As vacinas são preparações que estimulam o sistema imunológico a reconhecer e combater agentes infecciosos específicos, prevenindo a ocorrência de doenças.`
+        },
+        {
+            question: "2) Em que idade é recomendada a primeira dose da vacina BCG em crianças?",
+            options: ["Ao nascer", "Aos 2 meses", "Aos 6 meses", "Aos 12 meses", "Aos 15 meses"],
+            answer: 0, 
+            explanation: `Ao nascer
+Comentário: A vacina BCG é administrada preferencialmente ao nascer, para proteger contra formas graves de tuberculose.`
+        },
+        {
+            question: "3) A vacina tríplice viral protege contra quais doenças?",
+            options: ["Difteria, tétano e coqueluche", " Sarampo, caxumba e rubéola", "Hepatite A, hepatite B e hepatite C", "Poliomielite, varicela e meningite", "Febre amarela, dengue e zika"],
+            answer: 1, 
+            explanation: ` Sarampo, caxumba e rubéola
+Comentário: A tríplice viral imuniza contra sarampo, caxumba e rubéola, doenças virais que podem ser prevenidas por vacinação.`
+        },
+        {
+            question: "4) Qual vacina é administrada via oral em crianças para prevenir a poliomielite?",
+            options: ["BCG", "Hepatite B", "VIP (Vacina Inativada Poliomielite)", "VOP (Vacina Oral Poliomielite)", "Tríplice bacteriana"],
+            answer: 3, 
+            explanation: `VOP (Vacina Oral Poliomielite)
+Comentário: A VOP, conhecida como "gotinha", é administrada por via oral para prevenir a poliomielite.`
+        },
+        {
+            question: "5) Qual é a importância da vacinação em massa na comunidade?",
+            options: ["Reduzir custos com tratamentos médicos", "Promover a imunidade coletiva", "Aumentar a venda de medicamentos", "Melhorar a nutrição infantil", "Diminuir a prática de atividades físicas"],
+            answer: 1, 
+            explanation: `Promover a imunidade coletiva
+Comentário: A vacinação em massa contribui para a imunidade coletiva, protegendo indivíduos que não podem ser vacinados e reduzindo a circulação de doenças.`
+        },
+        {
+            question: "6) Qual vacina é indicada para prevenir a febre amarela??",
+            options: ["Tríplice viral", "Hepatite B", "BCG", "Vacina contra febre amarela", "Meningocócica C"],
+            answer: 3, 
+            explanation: `Vacina contra febre amarela
+Comentário: A vacina contra febre amarela é específica para prevenir essa doença viral transmitida por mosquitos.`
+        },
+        {
+            question: "7) Em que situação é contraindicado administrar vacinas de vírus vivos atenuados?",
+            options: ["Em pessoas com alergia a ovo", "Em gestantes", "Em idosos", "Em pessoas com hipertensão", "Em crianças acima de 5 anos"],
+            answer: 1, 
+            explanation: `Em gestantes
+Comentário: Vacinas de vírus vivos atenuados, como a tríplice viral, são geralmente contraindicadas durante a gestação devido ao risco teórico para o feto.`
+        },
+        {
+            question: "8) Qual é a via de administração da vacina BCG?",
+            options: ["Oral", "Intramuscular", "Subcutânea", "Intradérmica", "Intravenosa"],
+            answer: 3, 
+            explanation: ` Intradérmica
+Comentário: A vacina BCG é administrada por via intradérmica, geralmente no braço direito, formando uma pequena pápula no local.`
+        },
+        {
+            question: "9) Qual é a principal forma de transmissão da hepatite B, que pode ser prevenível por vacinação?",
+            options: ["Ingestão de alimentos contaminados", "Picada de mosquito", "Contato com sangue e fluidos corporais infectados", "Inalação de gotículas respiratórias", "Contato com animais infectado"],
+            answer: 2, 
+            explanation: `Contato com sangue e fluidos corporais infectados
+Comentário: A hepatite B é transmitida principalmente por contato com sangue e fluidos corporais contaminados, sendo prevenível por vacinação.`
+        },
+        {
+            question: "10) Por que é importante seguir o calendário vacinal recomendado?",
+            options: ["Para evitar visitas frequentes ao médico", "Para garantir proteção no momento adequado da vida", "Para reduzir os custos com saúde pública", "Para aumentar a produção de vacinas", "Para evitar reações adversas"],
+            answer: 1, 
+            explanation: `Para garantir proteção no momento adequado da vida
+Comentário: Seguir o calendário vacinal assegura que as vacinas sejam administradas nos períodos ideais, proporcionando proteção eficaz contra doenças.`
+        },
+        {
+            question: "11) Qual é a diferença entre vacinas inativadas e vacinas de vírus vivos atenuados?",
+            options: ["Vacinas inativadas contêm vírus mortos; vacinas atenuadas contêm vírus vivos enfraquecidos",
+                      "Vacinas inativadas requerem apenas uma dose; vacinas atenuadas requerem múltiplas doses", 
+                      "Vacinas inativadas são administradas por via oral; vacinas atenuadas, por via intramuscular",
+                      "Vacinas inativadas não causam efeitos colaterais; vacinas atenuadas podem causar", 
+                      "Vacinas inativadas são menos eficazes que vacinas atenuadas"],
+            answer: 0, 
+            explanation: `Vacinas inativadas contêm vírus mortos; vacinas atenuadas contêm vírus vivos enfraquecidos
+Comentário: Vacinas inativadas utilizam microrganismos mortos, enquanto as atenuadas usam microrganismos vivos enfraquecidos para estimular a resposta imunológica.`
+        },
+        {
+            question: "12) Qual é a função da vacina contra o HPV?",
+            options: ["Prevenir infecções respiratórias", "Prevenir câncer de colo do útero e verrugas genitais", "Tratar infecções por HPV", "Aliviar sintomas de doenças autoimunes", "Aumentar a imunidade geral"],
+            answer: 1, 
+            explanation: `Prevenir câncer de colo do útero e verrugas genitais
+Comentário: A vacina contra o Papilomavírus Humano (HPV) é eficaz na prevenção de infecções pelos tipos de HPV associados ao câncer de colo do útero e às verrugas genitais. `
+        },
+        {
+            question: "13) Qual vacina é recomendada para prevenir a coqueluche?",
+            options: ["BCG", "Hepatite B", " DTP (tríplice bacteriana)", "Tríplice viral", "Pneumocócica"],
+            answer: 2, 
+            explanation: `DTP (tríplice bacteriana)
+Comentário: A vacina DTP protege contra difteria, tétano e coqueluche, sendo fundamental para a imunização infantil.`
+        },
+        {
+            question: "14) A vacina contra a gripe deve ser tomada com que frequência?",
+            options: ["Apenas uma vez na vida", "A cada dois anos", "Anualmente", "Somente em casos de surtos", "A cada cinco anos"],
+            answer: 2, 
+            explanation: `Anualmente
+Comentário: Devido às constantes mutações do vírus influenza, a vacinação contra a gripe é recomendada anualmente para garantir proteção eficaz. `
+        },
+        {
+            question: "15) Qual é a importância da vacinação contra o sarampo?",
+            options: ["Reduzir a necessidade de antibióticos", "Prevenir complicações graves, como encefalite", "Melhorar a digestão", "Aumentar a massa muscular", "Prevenir doenças cardíacas"],
+            answer: 1, 
+            explanation: ` Prevenir complicações graves, como encefalite
+Comentário: A vacinação contra o sarampo é crucial para prevenir a doença e suas possíveis complicações graves, como encefalite e pneumonia. `
+        },
+        {
+            question: "16) Em que idade é recomendada a vacina contra o rotavírus em crianças?",
+            options: ["Ao nascer", "Aos 2 e 4 meses", "Aos 6 e 12 meses", "Aos 12 e 18 meses", "Aos 2 anos"],
+            answer: 1, 
+            explanation: `Aos 2 e 4 meses
+Comentário: A vacina contra o rotavírus é administrada em duas doses, aos 2 e 4 meses de idade, para prevenir gastroenterites graves em crianças. `
+        },
+        {
+            question: "17) Qual vacina é indicada para prevenir a meningite causada pelo Haemophilus influenzae tipo b?",
+            options: ["BCG", "Hepatite A", "Hib (Haemophilus influenzae tipo b)", "Tríplice viral", "Varicela"],
+            answer: 2, 
+            explanation: `Hib (Haemophilus influenzae tipo b)
+Comentário: A vacina Hib protege contra infecções graves, incluindo meningite, causadas pelo Haemophilus influenzae tipo b. `
+        },
+        {
+            question: "18) Por que é importante vacinar meninas contra o HPV antes do início da vida sexual?",
+            options: ["Para evitar efeitos colaterais da vacina", "Porque a vacina é menos eficaz após o início da vida sexual", "Para garantir maior resposta imunológica", "Porque a vacina só é aprovada para essa faixa etária", "Para reduzir custos com a vacinação"],
+            answer: 2, 
+            explanation: `Para garantir maior resposta imunológica
+Comentário: Vacinar meninas antes do início da vida sexual assegura uma resposta imunológica mais robusta e eficaz na prevenção de infecções por HPV. `
+        },
+        {
+            question: "19) Qual é a vacina indicada para prevenir a varicela (catapora)?",
+            options: ["BCG", "Hepatite B", "Varicela", "Tríplice viral", "Pneumocócica"],
+            answer: 2, 
+            explanation: `Varicela
+Comentário: A vacina contra a varicela protege contra a catapora, uma doença altamente contagiosa que pode levar a complicações graves. `
+        },
+        {
+            question: "20) Qual é a importância da vacinação contra a hepatite B em recém-nascidos?",
+            options: ["Prevenir infecções respiratórias", "Proteger contra infecções precoces e crônicas pelo vírus da hepatite B", "Melhorar a digestão", "Aumentar a imunidade geral", "Prevenir alergias alimentares"],
+            answer: 1, 
+            explanation: `Proteger contra infecções precoces e crônicas pelo vírus da hepatite B
+Comentário: A vacinação precoce contra a hepatite B é essencial para prevenir infecções que podem evoluir para doenças hepáticas crônicas. `
+        },
+        
+    ];
+
+    const quizContainer = document.getElementById("quiz");
+    const infoBubble = document.getElementById("infoBubble");
+    const infoText = document.getElementById("infoText");
+    let score = 0;
+    let answeredQuestions = 0; 
+
+   
+    function loadQuiz() {
+        quizContainer.innerHTML = ""; 
+        score = 0;
+        answeredQuestions = 0;
+
+        quizData.forEach((data, questionIndex) => {
+            const questionElement = document.createElement("div");
+            questionElement.classList.add("question");
+            questionElement.innerHTML = `<h3>${data.question}</h3>`;
+
+            const optionsList = document.createElement("ul");
+            optionsList.classList.add("options");
+
+            data.options.forEach((option, optionIndex) => {
+                const optionItem = document.createElement("li");
+                optionItem.textContent = option;
+                optionItem.onclick = () => checkAnswer(optionItem, optionIndex, data.answer, data.explanation);
+                optionsList.appendChild(optionItem);
+            });
+
+            questionElement.appendChild(optionsList);
+            quizContainer.appendChild(questionElement);
+        });
+
+        document.getElementById("score").innerText = "";
+    }
+
+    // Função para verificar a resposta
+    function checkAnswer(optionElement, selectedAnswer, correctAnswer, explanation) {
+        if (!optionElement.parentNode.classList.contains("answered")) { // Verifica se a pergunta já foi respondida
+            answeredQuestions++;
+            optionElement.parentNode.classList.add("answered"); // Marca pergunta como respondida
+
+            if (selectedAnswer === correctAnswer) {
+                optionElement.classList.add("correct");
+                score++;
+            } else {
+                optionElement.classList.add("wrong");
+                optionElement.parentNode.children[correctAnswer].classList.add("correct"); // Marca a correta
+            }
+
+            showBubble(explanation); // Mostra o balão com a explicação
+        }
+    }
+
+    // Função para mostrar o balão de informação
+    function showBubble(explanation) {
+        infoText.innerText = explanation;
+        infoBubble.style.display = "block";
+        setTimeout(() => {
+            infoBubble.classList.add("show");
+        }, 50); // Garante que a transição seja aplicada
+    }
+
+    // Função para fechar o balão
+    function closeBubble() {
+        infoBubble.classList.remove("show");
+        setTimeout(() => {
+            infoBubble.style.display = "none";
+        }, 500); // Garante a transição antes de esconder
+    }
+
+    // Função para finalizar o quiz e mostrar pontuação
+    function finishQuiz() {
+        if (answeredQuestions < quizData.length) {
+            alert("Por favor, responda todas as perguntas antes de finalizar.");
+            return;
+        }
+        document.getElementById("score").innerText = `Pontuação Final: ${score} / ${quizData.length}`;
+    }
+
+    // Função para refazer o quiz
+    function retryQuiz() {
+        closeBubble(); // Fecha o balão, se estiver aberto
+        loadQuiz(); // Recarrega as perguntas
+    }
+
+    // Carregar o quiz no início
+    loadQuiz();
+</script>
+</body>
+</html>

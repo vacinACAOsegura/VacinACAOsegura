@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativos - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="informativos.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">
+            <div class="logo">
+                <img src="Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="calendario.html">Calendário</a>
+            <a href="tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="esavi.html">ESAVI</a>
+            <a href="sistema_info.html">Sistemas de informações</a>
+            <a href="quiz/quiz.html">QUIZ</a>
+            <a href="index.html#contato">Contato</a>
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </nav>
+   
+   
+        
+    <div class="container">
+        <h1>Informativos</h1>
+        <div class="service-box">
+             <h3>Manual de Vigilância Epidemiológica</h3>
+             <a href="https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vacinacao-imunizacao-pni/manual_eventos-_adversos_pos_vacinacao_4ed_atualizada.pdf" target="_blank"><button>acesse aqui!</button></a>
+        </div>
+        <div  class="service-box">
+             <h3>Vacinação de Grupos Especiais</h3>
+             <a href="https://sbim.org.br/images/calendarios/calend-sbim-pacientes-especiais.pdf " target="_blank"><button>acesse aqui!</button></a>
+        </div>
+        <div  class="service-box">
+             <h3>Instrução Normativa do Calendário</h3>
+             <a href="https://www.gov.br/saude/pt-br/vacinacao/publicacoes/instrucao-normativa-que-instrui-o-calendario-nacional-de-vacinacao-2025.pdf " target="_blank"><button>acesse aqui!</button></a>
+        </div>
+        <div  class="service-box">
+             <h3>Notas Técnicas</h3>
+             <a href="https://www.gov.br/saude/pt-br/vacinacao/notas-tecnicas" target="_blank"><button>acesse aqui!</button></a>
+        </div>
+        <div  class="service-box">
+             <h3>Manual de Rede de Frio</h3>
+             <a href="https://bvsms.saude.gov.br/bvs/publicacoes/manual_rede_frio_programa_imunizacoes_5ed.pdf  " target="_blank"><button>acesse aqui!</button></a>
+        </div>
+        <div  class="service-box">
+             <h3>Sistema de informação de Insumos Estratégico</h3>
+             <a href="https://www.saude.sp.gov.br/resources/cve-centro-de-vigilancia-epidemiologica/areas-de-vigilancia/imunizacao/2020/sies_manual_usuario_ses.pdf " target="_blank"><button>acesse aqui!</button></a>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+
+</body>

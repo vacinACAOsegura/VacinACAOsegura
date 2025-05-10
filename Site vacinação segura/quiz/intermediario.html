@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="quiz.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <div class="logo">
+                <img src="../Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="../calendario.html">Calendário</a>
+            <a href="../tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="../esavi.html">ESAVI</a>
+            <a href="../sistema_info.html">Sistema de Registro</a>
+            <a href="quiz.html">QUIZ</a>
+            <a href="../index.html#contato">Contato</a>
+            <a href="../sobre.html">Sobre</a>
+        </div>
+    </nav>
+    
+<div class="quiz-container" id="quiz">
+    
+</div>
+
+<div id="score"></div>
+
+<div class="buttons">
+    <button class="finish-btn" onclick="finishQuiz()">Finalizar</button>
+    <button class="retry-btn" onclick="retryQuiz()">Refazer</button>
+</div>
+
+<div class="info-bubble" id="infoBubble">
+    <h4>Explicação</h4>
+    <p id="infoText">Aqui aparecerá a explicação.</p>
+    <button onclick="closeBubble()">Fechar</button>
+</div>
+
+<script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    toggleButton.addEventListener('click', () => {
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    const quizData = [
+        {
+            question: "1) Qual é a principal diferença entre imunização ativa e passiva?",
+            options: ["Imunização ativa envolve a administração de anticorpos prontos; imunização passiva estimula a produção de anticorpos pelo próprio organismo.",
+             "Imunização ativa proporciona proteção imediata; imunização passiva demora semanas para ser eficaz.",
+             "Imunização ativa resulta em memória imunológica duradoura; imunização passiva oferece proteção temporária sem formação de memória imunológica.",
+             "Imunização ativa é obtida apenas por vacinas; imunização passiva ocorre apenas por infecções naturais.",
+             "Imunização ativa é sempre segura; imunização passiva apresenta alto risco de reações adversas."],
+            answer: 2, 
+            explanation: `Imunização ativa resulta em memória imunológica duradoura; imunização passiva oferece proteção temporária sem formação de memória imunológica.
+Comentário: A imunização ativa, geralmente por meio de vacinas, estimula o sistema imunológico a produzir sua própria resposta, resultando em memória imunológica duradoura. Já a imunização passiva, como a administração de soros contendo anticorpos prontos, oferece proteção imediata, porém temporária, sem gerar memória imunológica.`
+        },
+        {
+            question: "2) Em relação à vacina BCG, é correto afirmar que:",
+            options: ["É administrada via intramuscular profunda.", "Protege contra todas as formas de tuberculose.", "Deve ser aplicada preferencialmente no braço direito.", "É contraindicada para recém-nascidos de mães HIV positivas.", "Requer reforço aos 10 anos de idade."],
+            answer: 2, 
+            explanation: `Deve ser aplicada preferencialmente no braço direito.
+Comentário: A vacina BCG é administrada por via intradérmica, preferencialmente no braço direito, para facilitar a identificação da cicatriz vacinal.`
+        },
+        {
+            question: "3) Sobre a vacina contra a febre amarela, assinale a alternativa correta:",
+            options: ["É composta por vírus inativado.", "É contraindicada para pessoas com alergia grave a ovo.", "Deve ser administrada anualmente.", " Não é recomendada para residentes em áreas urbanas.", "Pode ser administrada em gestantes sem restrições."],
+            answer: 1, 
+            explanation: `É contraindicada para pessoas com alergia grave a ovo.
+Comentário: A vacina contra a febre amarela é composta por vírus vivo atenuado e é contraindicada para indivíduos com alergia grave a ovo, devido ao risco de reações alérgicas.`
+        },
+        {
+            question: "4) A tríplice viral (SCR) protege contra quais doenças?",
+            options: ["Sarampo, coqueluche e rubéola.", "Caxumba, rubéola e tétano.", "Sarampo, caxumba e rubéola", "Difteria, tétano e coqueluche.", "Sarampo, caxumba e varicela."],
+            answer: 2, 
+            explanation: `Sarampo, caxumba e rubéola.
+Comentário: A vacina tríplice viral imuniza contra sarampo, caxumba e rubéola, doenças virais preveníveis por vacinação.`
+        },
+        {
+            question: "5) Qual é a recomendação atual para a administração da vacina contra o HPV no Brasil?",
+            options: ["Uma dose única para meninas aos 9 anos.", "Uma dose única para meninos e meninas de 9 a 14 anos", "Três doses para meninas de 9 a 14 anos.", "Duas doses para meninos de 9 a 14 anos.", "Uma dose única para meninos e meninas aos 12 anos."],
+            answer: 1, 
+            explanation: `uma dose única para meninos e meninas de 9 a 14 anos.
+O Programa Nacional de Imunização recentemente alterou o esquema vacinal para dose única.`
+        },
+        {
+            question: "6)  Em relação à vacina contra a hepatite B, é correto afirmar que:",
+            options: ["É administrada em dose única ao nascer.", "Não é recomendada para adultos.", "É contraindicada para gestantes.", "O esquema padrão consiste em três doses.", "Não pode ser administrada concomitantemente com outras vacinas."],
+            answer: 3, 
+            explanation: ` O esquema padrão consiste em três doses.
+Comentário: O esquema vacinal contra a hepatite B geralmente consiste em três doses: ao nascer, 1 mês e 6 meses de idade.`
+        },
+        {
+            question: "7) Qual das seguintes vacinas é contraindicada para imunossuprimidos?",
+            options: ["Hepatite B.", "Influenza inativada", "Tríplice viral.", "Pneumocócica conjugada.", "Meningocócica C."],
+            answer: 2, 
+            explanation: `Tríplice viral.
+Comentário: Vacinas de vírus vivos atenuados, como a tríplice viral, são geralmente contraindicadas para imunossuprimidos devido ao risco de infecção.`
+        },
+        {
+            question: "8) A vacina pneumocócica 10-valente protege contra:",
+            options: ["10 sorotipos de Streptococcus pneumoniae.", "10 sorotipos de Neisseria meningitidis.", "Todas as formas de pneumonia bacteriana.", "10 sorotipos de Haemophilus influenzae.", "Apenas pneumonias causadas por vírus."],
+            answer: 0, 
+            explanation: `10 sorotipos de Streptococcus pneumoniae.
+Comentário: A vacina pneumocócica 10-valente protege contra 10 sorotipos específicos de Streptococcus pneumoniae, um dos principais causadores de pneumonia, meningite e otite média em crianças. Ela é amplamente utilizada no Programa Nacional de Imunizações (PNI) para prevenir doenças graves causadas por este agente.`
+        },
+        {
+            question: "9) Qual é a principal contraindicação para a administração da vacina oral contra a poliomielite (VOP)?",
+            options: ["Crianças menores de 6 meses", "História de alergia a antibióticos", "Presença de imunodeficiências", "Gestantes", "Idade superior a 5 anos"],
+            answer: 2, 
+            explanation: `Presença de imunodeficiências
+Comentário: A VOP, por ser uma vacina de vírus vivo atenuado, é contraindicada em indivíduos com imunodeficiências, devido ao risco de infecção associada à vacina.`
+        },
+        {
+            question: "10) Em relação à vacina contra a influenza, é correto afirmar que:",
+            options: ["É composta por vírus vivos atenuados", "Deve ser administrada apenas em idosos", "É contraindicada para gestantes", "Requer administração anual", "Não é recomendada para crianças"],
+            answer: 3, 
+            explanation: `Requer administração anual
+Comentário: Devido às constantes mutações do vírus influenza, a vacinação anual é necessária para garantir proteção eficaz contra as cepas circulantes.`
+        },
+        {
+            question: "11) Qual é a recomendação para a administração da vacina tríplice bacteriana acelular do tipo adulto (dTpa) em gestantes?",
+            options: ["Uma dose a cada gestação, a partir da 20ª semana", "Uma dose única na vida, independentemente da gestação", "Duas doses em cada gestação, com intervalo de um mês", "Uma dose apenas se não houver histórico vacinal", "Não é recomendada para gestantes"],
+            answer: 0, 
+            explanation: `Uma dose a cada gestação, a partir da 20ª semana
+Comentário: A administração da dTpa em gestantes, preferencialmente entre a 27ª e a 36ª semana de gestação, protege o recém-nascido contra coqueluche nos primeiros meses de vida.`
+        },
+        {
+            question: "12) Sobre a vacina contra o rotavírus, é correto afirmar que:",
+            options: ["É administrada via intramuscular", "Protege contra todos os tipos de diarreia", "É indicada para crianças menores de 5 anos", "A primeira dose deve ser aplicada até 3 meses e 15 dias de vida", "É composta por vírus inativado"],
+            answer: 3, 
+            explanation: `A primeira dose deve ser aplicada até 3 meses e 15 dias de vida
+Comentário: A vacina contra o rotavírus é administrada via oral, com a primeira dose recomendada entre 1 mês e 15 dias e 3 meses e 15 dias de vida, para prevenir gastroenterites graves em crianças.`
+        },
+        {
+            question: "13) Qual das seguintes vacinas é recomendada para adolescentes de 11 a 12 anos, visando a proteção contra meningite?",
+            options: ["BCG", "Hepatite B", "Meningocócica ACWY", "Tríplice viral", "Varicela"],
+            answer: 2, 
+            explanation: `Meningocócica ACWY
+Comentário: A vacina meningocócica ACWY é recomendada para adolescentes de 11 a 12 anos, protegendo contra quatro sorogrupos de Neisseria meningitidis, causadores de meningite.`
+        },
+        {
+            question: "14) Em relação à vacina contra a hepatite A, é correto afirmar que:",
+            options: ["É administrada em dose única aos 12 meses de idade", "Requer reforço anual", "É contraindicada para crianças", "Protege contra hepatite B", "É composta por vírus vivos atenuados"],
+            answer: 0, 
+            explanation: `É administrada em dose única aos 12 meses de idade
+Comentário: A vacina contra a hepatite A é administrada em dose única aos 12 meses de idade, prevenindo a infecção pelo vírus da hepatite A.`
+        },
+        {
+            question: "15) Qual é a principal contraindicação para a administração da vacina tríplice viral (sarampo, caxumba e rubéola)?",
+            options: ["História de alergia a antibióticos", "Gestação", "Idade superior a 50 anos", "Presença de doenças crônicas", "Histórico de convulsões"],
+            answer: 1, 
+            explanation: `Gestação
+Comentário: A vacina tríplice viral, por ser de vírus vivos atenuados, é contraindicada durante a gestação devido ao risco teórico de infecção congênita.`
+        },
+        {
+            question: "16) Sobre a vacina contra o papilomavírus humano (HPV), é correto afirmar que:",
+            options: ["É indicada apenas para mulheres", "Protege contra todos os tipos de câncer", "Deve ser administrada preferencialmente antes do início da vida sexual", "Requer reforço a cada 5 anos", "É composta por vírus vivos atenuados"],
+            answer: 2, 
+            explanation: `Deve ser administrada preferencialmente antes do início da vida sexual
+Comentário: A vacina contra o HPV é mais eficaz quando administrada antes do início da vida sexual, garantindo melhor resposta imunológica e prevenção de infecções futuras.`
+        },
+        {
+            question: "17) Em relação à vacina contra a varicela, é correto afirmar que:",
+            options: ["É administrada via oral", "Requer duas doses para imunização completa", "É contraindicada para crianças", "Protege contra o herpes-zóster", "É composta por vírus inativado"],
+            answer: 1, 
+            explanation: `Requer duas doses para imunização completa
+Comentário: A vacina contra a varicela é administrada em duas doses para garantir imunização eficaz contra a catapora.`
+        },
+        {
+            question: "18) Qual é a recomendação para a administração da vacina meningocócica C conjugada em crianças?",
+            options: ["Dose única aos 12 meses", "Duas doses no primeiro ano de vida e um reforço aos 12 meses", "Apenas uma dose ao nascer", "Duas doses aos 5 e 10 anos", "Reforço anual até os 5 anos"],
+            answer: 1, 
+            explanation: `Duas doses no primeiro ano de vida e um reforço aos 12 meses
+Comentário: O esquema vacinal para a meningocócica C conjugada inclui duas doses no primeiro ano de vida e um reforço aos 12 meses, para proteção contra a meningite C.`
+        },
+        {
+            question: "19) Sobre a vacina contra a hepatite A, é correto afirmar que:",
+            options: ["É administrada em dose única aos 12 meses de idade", "Requer reforço anual", "É contraindicada para crianças", "Protege contra hepatite B", "É composta por vírus vivos atenuados"],
+            answer: 0, 
+            explanation: `É administrada em dose única aos 12 meses de idade
+Comentário: A vacina contra a hepatite A é administrada em dose única aos 12 meses de idade, prevenindo a infecção pelo vírus da hepatite A.`
+        },
+        {
+            question: "20) Os recém-nascidos prematuros e com baixo peso, internados na UTI neonatal logo após o nascimento, devem receber a vacina BCG:",
+            options: ["Nas primeiras 24 horas de vida.", "Quando atingirem 2.000 gramas.", "Até o primeiro mês de vida.", "Após atingirem 2.500 gramas.", "Nos primeiros 15 dias de vida."],
+            answer: 1, 
+            explanation: `Comentário: a vacina BCG não pode ser administrada em crianças com peso menor que 2.000gramas.`
+        },
+       
+    ];
+
+    const quizContainer = document.getElementById("quiz");
+    const infoBubble = document.getElementById("infoBubble");
+    const infoText = document.getElementById("infoText");
+    let score = 0;
+    let answeredQuestions = 0; 
+
+    
+    function loadQuiz() {
+        quizContainer.innerHTML = ""; 
+        score = 0;
+        answeredQuestions = 0;
+
+        quizData.forEach((data, questionIndex) => {
+            const questionElement = document.createElement("div");
+            questionElement.classList.add("question");
+            questionElement.innerHTML = `<h3>${data.question}</h3>`;
+
+            const optionsList = document.createElement("ul");
+            optionsList.classList.add("options");
+
+            data.options.forEach((option, optionIndex) => {
+                const optionItem = document.createElement("li");
+                optionItem.textContent = option;
+                optionItem.onclick = () => checkAnswer(optionItem, optionIndex, data.answer, data.explanation);
+                optionsList.appendChild(optionItem);
+            });
+
+            questionElement.appendChild(optionsList);
+            quizContainer.appendChild(questionElement);
+        });
+
+        document.getElementById("score").innerText = "";
+    }
+
+    
+    function checkAnswer(optionElement, selectedAnswer, correctAnswer, explanation) {
+        if (!optionElement.parentNode.classList.contains("answered")) { 
+            answeredQuestions++;
+            optionElement.parentNode.classList.add("answered"); 
+
+            if (selectedAnswer === correctAnswer) {
+                optionElement.classList.add("correct");
+                score++;
+            } else {
+                optionElement.classList.add("wrong");
+                optionElement.parentNode.children[correctAnswer].classList.add("correct"); // Marca a correta
+            }
+
+            showBubble(explanation); 
+        }
+    }
+
+    function showBubble(explanation) {
+        infoText.innerText = explanation;
+        infoBubble.style.display = "block";
+        setTimeout(() => {
+            infoBubble.classList.add("show");
+        }, 50);
+    }
+
+    function closeBubble() {
+        infoBubble.classList.remove("show");
+        setTimeout(() => {
+            infoBubble.style.display = "none";
+        }, 500); 
+    }
+
+    function finishQuiz() {
+        if (answeredQuestions < quizData.length) {
+            alert("Por favor, responda todas as perguntas antes de finalizar.");
+            return;
+        }
+        document.getElementById("score").innerText = `Pontuação Final: ${score} / ${quizData.length}`;
+    }
+
+    function retryQuiz() {
+        closeBubble(); 
+        loadQuiz();
+    }
+
+    
+    loadQuiz();
+</script>
+</body>
+</html>

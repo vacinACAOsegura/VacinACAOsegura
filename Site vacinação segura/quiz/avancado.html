@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="quiz.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <div class="logo">
+                <img src="../Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="../calendario.html">Calendário</a>
+            <a href="../tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="../esavi.html">ESAVI</a>
+            <a href="../sistema_info.html">Sistema de Registro</a>
+            <a href="quiz.html">QUIZ</a>
+            <a href="../index.html#contato">Contato</a>
+            <a href="../sobre.html">Sobre</a>
+        </div>
+    </nav>
+    
+<div class="quiz-container" id="quiz">
+    
+</div>
+
+<div id="score"></div>
+
+<div class="buttons">
+    <button class="finish-btn" onclick="finishQuiz()">Finalizar</button>
+    <button class="retry-btn" onclick="retryQuiz()">Refazer</button>
+</div>
+
+<div class="info-bubble" id="infoBubble">
+    <h4>Explicação</h4>
+    <p id="infoText">Aqui aparecerá a explicação.</p>
+    <button onclick="closeBubble()">Fechar</button>
+</div>
+
+<script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    toggleButton.addEventListener('click', () => {
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+    
+  
+    const quizData = [
+        {
+            question: "1) Qual é o principal mecanismo de ação das vacinas de mRNA, como as desenvolvidas contra a COVID-19?",
+            options: ["Introdução de proteínas virais inativadas para estimular a resposta imunológica", "Inserção de DNA viral no núcleo celular para produção de antígenos", 
+                     "Entrega de mRNA que codifica antígenos virais para tradução no citoplasma", "Utilização de vetores virais para transportar antígenos para as células apresentadoras", "Administração de toxinas bacterianas atenuadas para induzir imunidade"],
+            answer: 2, 
+            explanation: `Entrega de mRNA que codifica antígenos virais para tradução no citoplasma
+Comentário: Vacinas de mRNA funcionam entregando moléculas de mRNA que codificam proteínas específicas do patógeno. Uma vez no citoplasma, o mRNA é traduzido em proteínas que são reconhecidas pelo sistema imunológico, induzindo uma resposta imune adaptativa sem a necessidade de introduzir o patógeno vivo ou inativado.`
+        },
+        {
+            question: "2) Em relação às vacinas de subunidade proteica, como a vacina contra o HPV, é correto afirmar que:",
+            options: ["Utilizam vírus vivos atenuados para induzir imunidade", "Contêm fragmentos específicos de proteínas do patógeno para estimular a resposta imune", "Requerem apenas uma dose para imunização eficaz", "São contraindicadas para indivíduos imunocomprometidos", "Não necessitam de adjuvantes para aumentar a imunogenicidade"],
+            answer: 1, 
+            explanation: `Contêm fragmentos específicos de proteínas do patógeno para estimular a resposta imune
+Comentário: Vacinas de subunidade proteica, como a vacina contra o HPV, contêm partes específicas do patógeno, como proteínas ou polissacarídeos, que são suficientes para induzir uma resposta imunológica protetora sem introduzir o organismo inteiro.`
+        },
+        {
+            question: "3) Qual é a principal vantagem das vacinas de vetor viral não replicante, como a vacina contra o Ebola, em comparação com vacinas de vetor viral replicante?",
+            options: ["Maior estabilidade térmica", "Menor risco de causar infecção no hospedeiro", "Produção mais rápida e econômica", "Indução de resposta imunológica mais robusta", "Maior facilidade de administração oral"],
+            answer: 1, 
+            explanation: `Menor risco de causar infecção no hospedeiro
+Comentário: Vacinas de vetor viral não replicante utilizam um vírus modificado que não pode se replicar nas células do hospedeiro, reduzindo o risco de causar infecção, especialmente em indivíduos imunocomprometidos.`
+        },
+        {
+            question: "4) Em relação à vacina BCG, utilizada contra a tuberculose, é correto afirmar que:",
+            options: ["É uma vacina de subunidade proteica", "Oferece proteção uniforme contra todas as formas de tuberculose", "É derivada de uma cepa atenuada de Mycobacterium bovis", "Requer reforços anuais para manter a eficácia", "É administrada por via intramuscular"],
+            answer: 2, 
+            explanation: ` É derivada de uma cepa atenuada de Mycobacterium bovis
+Comentário: A vacina BCG é derivada de uma cepa atenuada de Mycobacterium bovis e é utilizada para prevenir formas graves de tuberculose, especialmente em crianças.`
+        },
+        {
+            question: "5) Qual é o papel dos adjuvantes em vacinas inativadas?",
+            options: ["Atuar como conservantes para aumentar a vida útil da vacina", "Estimular a resposta imunológica aumentando a imunogenicidade do antígeno", "Neutralizar toxinas presentes no antígeno vacinal", "Facilitar a administração da vacina por via oral", "Reduzir a necessidade de múltiplas doses de reforço"],
+            answer: 1, 
+            explanation: `Estimular a resposta imunológica aumentando a imunogenicidade do antígeno
+Comentário: Adjuvantes são substâncias adicionadas a vacinas para melhorar a resposta imunológica ao antígeno, aumentando a produção de anticorpos e a eficácia da vacina.`
+        },
+        {
+            question: "6) Em relação às vacinas conjugadas, como a vacina pneumocócica conjugada, é correto afirmar que:",
+            options: ["São compostas por polissacarídeos capsulares ligados a proteínas transportadoras",
+                     "Utilizam vírus vivos atenuados para induzir imunidade", "Não são eficazes em crianças menores de 2 anos",
+                      "Requerem adjuvantes para serem eficazes",
+                       "São administradas exclusivamente por via oral"],
+            answer: 0, 
+            explanation: `São compostas por polissacarídeos capsulares ligados a proteínas transportadoras
+Comentário: Vacinas conjugadas combinam polissacarídeos capsulares de bactérias com proteínas transportadoras para melhorar a resposta imunológica, especialmente em crianças pequenas.`
+        },
+        {
+            question: "7) Qual é a principal diferença entre vacinas monovalentes e polivalentes?",
+            options: ["Vacinas monovalentes protegem contra um único sorotipo ou cepa de um patógeno; vacinas polivalentes protegem contra múltiplos sorotipos ou cepas", 
+                "Vacinas monovalentes requerem múltiplas doses; vacinas polivalentes requerem dose única", 
+                "Vacinas monovalentes são sempre inativadas; vacinas polivalentes são sempre atenuadas", 
+                "Vacinas monovalentes são administradas por via oral; vacinas polivalentes por via intramuscular", 
+                "Vacinas monovalentes são menos eficazes que vacinas polivalentes"],
+            answer: 0, 
+            explanation: `Vacinas monovalentes protegem contra um único sorotipo ou cepa de um patógeno; vacinas polivalentes protegem contra múltiplos sorotipos ou cepas
+                    Vacinas Monovalentes Contêm antígenos de uma única cepa ou tipo de agente infeccioso. São desenvolvidas para imunizar contra um único patógeno ou variante.Exemplo: A vacina contra o sarampo (monovalente) protege apenas contra o vírus do sarampo.
+
+Vacinas Polivalentes (ou multivalentes)
+
+Contêm antígenos de múltiplas cepas ou tipos de agentes infecciosos. São projetadas para proteger contra vários patógenos ou variantes em uma única dose. Exemplo: A vacina tríplice viral (sarampo, caxumba e rubéola) e a vacina pneumocócica 13-valente, que protege contra 13 sorotipos diferentes da bactéria pneumococo.`
+        },
+        {
+            question: "8) Em relação às vacinas de DNA, é correto afirmar que:",
+            options: ["Utilizam vetores virais para entregar o antígeno.", " Introduzem plasmídeos contendo genes do patógeno nas células do hospedeiro.", "São compostas por proteínas recombinantes do patógeno.", "Requerem adjuvantes para serem eficazes.", "São administradas exclusivamente por via oral."],
+            answer: 1, 
+            explanation: `Introduzem plasmídeos contendo genes do patógeno nas células do hospedeiro. Comentário: Vacinas de DNA funcionam introduzindo plasmídeos que contêm genes específicos do patógeno nas células do hospedeiro, permitindo que estas produzam os antígenos e, assim, induzam uma resposta imunológica.`
+        },
+        {
+            question: "9) Qual é a principal vantagem das vacinas de subunidade proteica em comparação com vacinas de vírus inativado?",
+            options: ["Maior estabilidade térmica.", "Indução de resposta imunológica mais ampla. ", "Menor risco de reações adversas.", "Produção mais rápida e econômica.", "Maior facilidade de administração"],
+            answer: 2, 
+            explanation: `Menor risco de reações adversas. Comentário: Vacinas de subunidade proteica contêm apenas partes específicas do patógeno, o que reduz o risco de reações adversas associadas à presença de componentes adicionais encontrados em vacinas de vírus inativado.`
+        },
+        {
+            question: "10) Em relação às vacinas de vetor viral replicante, é correto afirmar que:",
+            options: ["Utilizam vírus modificados que podem se replicar no hospedeiro para expressar antígenos do patógeno.", 
+                "São compostas por proteínas recombinantes do patógeno.", "Requerem adjuvantes para serem eficazes.", "São administradas exclusivamente por via oral", "Não induzem resposta imunológica celular."],
+            answer: 0, 
+            explanation: `Utilizam vírus modificados que podem se replicar no hospedeiro para expressar antígenos do patógeno. Comentário: Vacinas de vetor viral replicante utilizam vírus geneticamente modificados que podem se replicar nas células do hospedeiro, expressando antígenos do patógeno e induzindo uma resposta imunológica robusta.`
+        },
+        {
+            question: "11) Qual é a principal diferença entre vacinas de toxoide e vacinas de subunidade proteica?",
+            options: ["Vacinas de toxoide utilizam toxinas inativadas; vacinas de subunidade proteica utilizam fragmentos de proteínas do patógeno. ", 
+                "Vacinas de toxoide são compostas por proteínas recombinantes; vacinas de subunidade proteica utilizam vírus inteiros inativados.", 
+                "Vacinas de toxoide requerem adjuvantes; vacinas de subunidade proteica não.", 
+                "Vacinas de toxoide são administradas por via oral; vacinas de subunidade proteica por via intramuscular.", 
+                "Vacinas de toxoide induzem imunidade celular; vacinas de subunidade proteica induzem imunidade humoral"],
+            answer: 0, 
+            explanation: `Vacinas de toxoide utilizam toxinas inativadas; vacinas de subunidade proteica utilizam fragmentos de proteínas do patógeno. Comentário: Vacinas de toxoide contêm toxinas bacterianas que foram inativadas, enquanto vacinas de subunidade proteica contêm fragmentos específicos de proteínas do patógeno para estimular a resposta imunológica.`
+        },
+        {
+            question: "12) Em relação às vacinas de RNA mensageiro (mRNA), é correto afirmar que:",
+            options: ["Introduzem RNA viral diretamente no núcleo da célula hospedeira.", "Utilizam vetores virais para entregar o mRNA", "Codificam antígenos específicos que são traduzidos no citoplasma da célula hospedeira.", "Requerem adjuvantes para serem eficazes.", "São compostas por proteínas recombinantes do patógeno."],
+            answer: 2, 
+            explanation: `Codificam antígenos específicos que são traduzidos no citoplasma da célula hospedeira. Comentário: Vacinas de mRNA fornecem instruções genéticas para que as células do hospedeiro produzam antígenos específicos, que são então reconhecidos pelo sistema imunológico, induzindo uma resposta imune protetora.`
+        },
+        {
+            question: "13) Qual é a principal vantagem das vacinas de vetor viral não replicante em comparação com vacinas de vetor viral replicante? ",
+            options: [" Maior estabilidade térmica. ", "Menor risco de causar infecção no hospedeiro", "Produção mais rápida e econômica.", "Indução de resposta imunológica mais robusta. ", "Maior facilidade de administração"],
+            answer: 1, 
+            explanation: `Menor risco de causar infecção no hospedeiro. Comentário: Vacinas de vetor viral não replicante utilizam vírus modificados que não podem se replicar nas células do hospedeiro, reduzindo o risco de infecção, especialmente em indivíduos imunocomprometidos.`
+        },
+        {
+            question: "14 Em relação às vacinas de subunidade proteica, é correto afirmar que:",
+            options: ["Utilizam vírus vivos atenuados para induzir imunidade.", "Contêm fragmentos específicos de proteínas do patógeno para estimular a resposta imune. ", 
+                      "Requerem apenas uma dose para imunização eficaz. ", "São contraindicadas para indivíduos imunocomprometidos.", "Não necessitam de adjuvantes para aumentar a imunogenicidade."],
+            answer: 1, 
+            explanation: `Contêm fragmentos específicos de proteínas do patógeno para estimular a resposta imune. Comentário: Vacinas de subunidade proteica contêm partes específicas do patógeno, como proteínas ou polissacarídeos, que são suficientes para induzir uma resposta imunológica protetora sem introduzir o organismo inteiro. Geralmente, essas vacinas requerem adjuvantes para aumentar sua imunogenicidade e podem necessitar de múltiplas doses para alcançar proteção adequada. Elas são consideradas seguras para indivíduos imunocomprometidos, pois não contêm organismos vivos.`
+        },
+        {
+            question: "15) Qual é a principal diferença entre vacinas de toxoide e vacinas de subunidade proteica? ",
+            options: ["Vacinas de toxoide utilizam toxinas inativadas; vacinas de subunidade proteica utilizam fragmentos de proteínas do patógeno.", 
+                    "Vacinas de toxoide são compostas por proteínas recombinantes; vacinas de subunidade proteica utilizam vírus inteiros inativados.", 
+                    "Vacinas de toxoide são compostas por proteínas recombinantes; vacinas de subunidade proteica utilizam vírus inteiros inativados.", 
+                    "Vacinas de toxoide são administradas por via oral; vacinas de subunidade proteica por via intramuscular. ", 
+                    "Vacinas de toxoide induzem imunidade celular; vacinas de subunidade proteica induzem imunidade humoral."],
+            answer: 0, 
+            explanation: `Vacinas de toxoide utilizam toxinas inativadas; vacinas de subunidade proteica utilizam fragmentos de proteínas do patógeno. Comentário: Vacinas de toxoide contêm toxinas bacterianas que foram inativadas, enquanto vacinas de subunidade proteica contêm fragmentos específicos de proteínas do patógeno para estimular a resposta imunológica. Ambos os tipos de vacinas geralmente requerem adjuvantes para aumentar a imunogenicidade e são administradas por via intramuscular. A imunidade induzida depende do tipo de antígeno e da formulação da vacina. `
+        },
+        {
+            question: "16) Quando o calendário de vacinação do adolescente indica a vacina dT (contra difteria e tétano) ?",
+            options: ["Aos 9 anos, se esquema de três doses completo", "Aos 10 anos, como reforço ", "Aos 11 anos, se já recebeu anteriormente as três doses do esquema primário ", "Aos 12 anos, independente do esquema anterior ", "São compostas por Aos 13 anos, como reforço"],
+            answer: 2, 
+            explanation: ` O adolescente que já recebeu anteriormente 03 (três) doses ou mais das vacinas DTP, DT ou dT, aplicar uma dose de reforço (necessário a cada 10 anos). `
+        },
+        {
+            question: "17) Qual é a principal vantagem das vacinas de vetor viral não replicante em comparação com vacinas de vetor viral replicante?",
+            options: ["Maior estabilidade térmica.", "Menor risco de causar infecção no hospedeiro.", "Produção mais rápida e econômica.", "Indução de resposta imunológica mais robusta.", "Maior facilidade de administração."],
+            answer: 1, 
+            explanation: `Menor risco de causar infecção no hospedeiro. Comentário: Vacinas de vetor viral não replicante utilizam vírus geneticamente modificados que não podem se replicar nas células do hospedeiro, reduzindo o risco de causar infecção, especialmente em indivíduos imunocomprometidos. No entanto, podem induzir respostas imunológicas menos robustas em comparação com vetores replicantes, podendo necessitar de adjuvantes ou doses de reforço. `
+        },
+        {
+            question: "18)A vacina anti pneumocócica 23-valente é recomendada para qual público prioritariamente?",
+            options: ["Crianças menores de 5 anos ", "Adolescente de 11 a 19 anos", 
+                    "Gestantes e Puérperas", "Mulheres em idade fértil ", "Idosos acima de 60 anos e doentes crônicos"],
+            answer: 4, 
+            explanation: ` recomendada para maiores de 60 anos e pessoas com doenças crônicas (cardiopatias, pneumopatias, diabéticos).`
+        },
+        {
+            question: "19) Qual é a principal diferença entre vacinas monovalentes e polivalentes?",
+            options: ["Vacinas monovalentes protegem contra um único sorotipo ou cepa de um patógeno; vacinas polivalentes protegem contra múltiplos sorotipos ou cepas.", 
+                     "Vacinas monovalentes requerem múltiplas doses; vacinas polivalentes requerem dose única.", 
+                     "Vacinas monovalentes são sempre inativadas; vacinas polivalentes são sempre atenuadas.", 
+                     "Vacinas monovalentes são administradas por via oral; vacinas polivalentes por via intramuscular.", 
+                     "Vacinas monovalentes são menos eficazes que vacinas polivalentes."],
+            answer: 0, 
+            explanation: `Vacinas monovalentes protegem contra um único sorotipo ou cepa de um patógeno; vacinas polivalentes protegem contra múltiplos sorotipos ou cepas.
+Comentário: Vacinas monovalentes são direcionadas para induzir imunidade contra uma única variante do patógeno, enquanto vacinas polivalentes contêm antígenos de várias variantes, ampliando a proteção contra diferentes sorotipos ou cepas. Um exemplo é a vacina pneumocócica conjugada, que pode ser formulada para proteger contra vários sorotipos de Streptococcus pneumoniae.`
+        },
+        {
+            question: "20) Qual é a principal vantagem das vacinas de mRNA em comparação com vacinas tradicionais?",
+            options: ["Produção mais rápida e escalável.", "Não requerem armazenamento a temperaturas extremamente baixas.", "São eficazes com apenas uma dose.", "Contêm componentes vivos que estimulam melhor a imunidade.", "Não induzem efeitos colaterais leves."],
+            answer: 0, 
+            explanation: `Produção mais rápida e escalável.
+Comentário: Vacinas de mRNA oferecem a vantagem de serem produzidas rapidamente em grande escala, especialmente durante pandemias, pois não dependem de cultivo celular ou de processos complexos de purificação de proteínas. Essa característica foi fundamental no desenvolvimento das vacinas contra a COVID-19. Contudo, elas requerem armazenamento em temperaturas muito baixas para manter sua estabilidade.`
+        },
+       
+    ];
+
+    const quizContainer = document.getElementById("quiz");
+    const infoBubble = document.getElementById("infoBubble");
+    const infoText = document.getElementById("infoText");
+    let score = 0;
+    let answeredQuestions = 0; 
+
+    
+    function loadQuiz() {
+        quizContainer.innerHTML = ""; 
+        score = 0;
+        answeredQuestions = 0;
+
+        quizData.forEach((data, questionIndex) => {
+            const questionElement = document.createElement("div");
+            questionElement.classList.add("question");
+            questionElement.innerHTML = `<h3>${data.question}</h3>`;
+
+            const optionsList = document.createElement("ul");
+            optionsList.classList.add("options");
+
+            data.options.forEach((option, optionIndex) => {
+                const optionItem = document.createElement("li");
+                optionItem.textContent = option;
+                optionItem.onclick = () => checkAnswer(optionItem, optionIndex, data.answer, data.explanation);
+                optionsList.appendChild(optionItem);
+            });
+
+            questionElement.appendChild(optionsList);
+            quizContainer.appendChild(questionElement);
+        });
+
+        document.getElementById("score").innerText = "";
+    }
+
+   
+    function checkAnswer(optionElement, selectedAnswer, correctAnswer, explanation) {
+        if (!optionElement.parentNode.classList.contains("answered")) { // Verifica se a pergunta já foi respondida
+            answeredQuestions++;
+            optionElement.parentNode.classList.add("answered"); // Marca pergunta como respondida
+
+            if (selectedAnswer === correctAnswer) {
+                optionElement.classList.add("correct");
+                score++;
+            } else {
+                optionElement.classList.add("wrong");
+                optionElement.parentNode.children[correctAnswer].classList.add("correct"); // Marca a correta
+            }
+
+            showBubble(explanation); 
+        }
+    }
+
+   
+    function showBubble(explanation) {
+        infoText.innerText = explanation;
+        infoBubble.style.display = "block";
+        setTimeout(() => {
+            infoBubble.classList.add("show");
+        }, 50); 
+    }
+
+   
+    function closeBubble() {
+        infoBubble.classList.remove("show");
+        setTimeout(() => {
+            infoBubble.style.display = "none";
+        }, 500); 
+    }
+
+    
+    function finishQuiz() {
+        if (answeredQuestions < quizData.length) {
+            alert("Por favor, responda todas as perguntas antes de finalizar.");
+            return;
+        }
+        document.getElementById("score").innerText = `Pontuação Final: ${score} / ${quizData.length}`;
+    }
+
+    
+    function retryQuiz() {
+        closeBubble(); 
+        loadQuiz(); 
+    }
+
+    
+    loadQuiz();
+</script>
+</body>
+</html>

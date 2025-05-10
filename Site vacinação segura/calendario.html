@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="calendario.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">
+            <div class="logo">
+                <img src="Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="calendario.html">Calendário</a>
+            <a href="tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="esavi.html">ESAVI</a>
+            <a href="sistema_info.html">Sistemas de informações</a>
+            <a href="quiz/quiz.html">QUIZ</a>
+            <a href="index.html#contato">Contato</a>
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </nav>
+
+
+    
+   <section class="calendar-content container">
+        <h1>Calendário de Vacinação</h1>
+        <div id="info_adcionais"  class="more-info-button">
+            <button>Mais informações sobre as vacinas</button>
+        </div>
+        <div class="calendar-services">
+            <div class="calendar-box" data-faixa="crianca" style="background:#7cba85;" >
+                <img src="Icons/criancas.png" alt="logo calendario" style="height: 100px;">
+                <h3>Criança</h3>
+                <button>Acesse aqui</button>
+            </div>
+            <div class="calendar-box" data-faixa="adolescente" style="background: #1683dce2;">
+                <img src= "Icons/adolescentes.png" alt="logo calendario" style="height: 100px;">
+                <h3>Adolescente</h3>
+                <button>Acesse aqui</button>
+            </div>
+            <div class="calendar-box" data-faixa="adulto" style="background: #eaad14c9;">
+                <img src="Icons/adulto e idoso.png" alt="logo calendario" style="height: 100px;">
+                <h3>Adulto e Idoso</h3>
+                <button>Acesse aqui</button>
+            </div>
+            <div class="calendar-box" data-faixa="gestante" style="background: #F48688;">
+                <img src="Icons/gestantes.png" alt="logo calendario" style="height: 100px;">
+                <h3>Gestante</h3>
+                <button>Acesse aqui</button>
+            </div>
+        
+            <div class="calendar-box-especiais" data-faixa="especiais" style="background: #ba7c96;">
+                <img src="Icons/casos_especiais.png" alt="logo calendario" style="height: 100px;">
+                <h3>Casos Especiais</h3>
+                <button>Acesse aqui</button>
+            </div>
+        </div>
+    </section>
+ <script>  
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        });
+     document.addEventListener("DOMContentLoaded", function() {
+         const cards = document.querySelectorAll(".calendar-box");
+
+         cards.forEach(card => {
+             card.onclick = function() {
+                 const faixa = card.getAttribute("data-faixa");
+                 window.location.href = `vacinas.html?faixa=${faixa}`;
+             };
+         });
+     });
+
+     document.addEventListener("DOMContentLoaded", function() {
+         const cards = document.querySelectorAll(".calendar-box-especiais");
+
+         cards.forEach(card => {
+             card.onclick = function() {
+                 const faixa = card.getAttribute("data-faixa");
+                 window.location.href = `vacinas.html?faixa=${faixa}`;
+             };
+         });
+     });
+     
+     document.getElementById("info_adcionais").onclick = function() {
+     window.location.href = "info_adicionais.html";
+    };
+ </script>
+</body>
+</html>

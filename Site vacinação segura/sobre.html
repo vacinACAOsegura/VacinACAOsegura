@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="sobre.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">
+            <div class="logo">
+                <img src="Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="calendario.html">Calendário</a>
+            <a href="tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="esavi.html">ESAVI</a>
+            <a href="sistema_info.html">Sistemas de informações</a>
+            <a href="quiz/quiz.html">QUIZ</a>
+            <a href="index.html#contato">Contato</a>
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </nav>
+   
+   
+        
+    <div class="container">
+        <h1>Sobre o projeto</h1>
+        <p>O Aplicativo Web VacinAÇÃOsegura é o Produto Educacional (PE) resultante da dissertação de mestrado de Lilian Carla Monteiro da Silva, 
+            no Programa de Pós Graduação em Criatividade e Inovação em Metodologias de Ensino Superior (PPGCIMES) - Núcleo de Inovação e Tecnologias 
+            Aplicadas a Ensino e Extensão (NITAE) na Universidade Federal do Pará, sob a orientação da Prof. Dra. Danielle Costa Carrara Couto, na linha de 
+            pesquisa CIPPE – Criatividade e Inovação em Processos e Produtos Educacionais.  
+        </p>
+
+        <p>O VacinAÇÃOsegura foi hospedado em um subdomínio do site da Prefeitura Municipal de Bragança, da qual Lilian Carla é servidora pública efetiva na Secretaria Municipal de Saúde, com o consentimento do gestor municipal, o que caracteriza uma potencialidade para ampla divulgação.
+            Outro fator importante a ser destacado foi a construção cooperativa com alunas bolsistas PIBIC-UFPA do curso de Computação (Campus Guamá – ICEN/Facomp), que participaram diretamente do desenvolvimento do software e do design das telas, de forma colaborativa, como parte de seus projetos pessoais enquanto bolsistas, sem geração de despesas para a pesquisadora.
+            Também houve a participação de um aluno do curso de Engenharia de Pesca – UFPA/Campus Bragança, responsável pela criação da logomarca do produto educacional.
+        </p>
+
+        <h2>Participantes</h2>
+        <div class="column">
+            <div class="box">
+                <img src="Icons/Lilian.jpeg" alt="Lilian" class="img">
+                <h3>Lilian Carla Monteiro da Silva</h3>
+                <h3>Pesquisadora/Designer Instrucional</h3>
+                <h3><a href="https://www.linkedin.com/in/lilian-carla-14729629b/" target="_blank">Linkedin</a></h3>
+            </div>
+            <div class="box">
+                <img src="Icons/Danielle.jpeg" alt="Danielle" class="img">
+                <h3>Danielle Carrara Couto</h3>
+                <h3>Orientadora/Supervisora</h3>
+                <h3><a href="https://www.linkedin.com/in/danielle-costacc/" target="_blank">Linkedin</a></h3>
+            </div>
+            <div class="box">
+                <img src="Icons/Beatriz.jpeg" alt="Beatriz" class="img">
+                <h3>Ana Beatriz Serra</h3>
+                <h3>Desenvolvedora Front-end</h3>
+                <h3><a href="www.linkedin.com/in/ana-beatriz-serra-" target="_blank">Linkedin</a></h3>
+            </div>
+            <div class="box">
+                <img src="Icons/Ester.jpeg" alt="Ester" class="img">
+                <h3>Ester Souza de Castro</h3>
+                <h3>Design Gráfico</h3>
+                <h3><a href="https://github.com/estersdecastro" target="_blank">GitHub</a></h3>
+            </div>
+            
+            <div class="box">
+                <img src="Icons/Allyson.jpeg" alt="Allyson" class="img">
+                <h3>Allysson Laurrant S. Santos</h3>
+                <h3>Criação da Logomarca</h3>
+                <h3><a href="https://www.linkedin.com/in/allysson-laurrant-da-silva-santos-732024253/" target="_blank">Linkedin</a></h3>
+            </div>
+           
+        </div>
+
+        <h2>Realização</h2>
+        <div class="column">
+            <div class="box">
+                <a href="https://ufpa.br/" target="_blank">
+                    <img src="UFPA logo.png" alt="Ufpa" class="img">
+                </a>
+                <h3><a href="https://ufpa.br/" target="_blank">Site UFPA</a></h3>
+            </div>
+            
+            <div class="box">
+                <a href="https://www.ppgcimes.propesp.ufpa.br/index.php/br/" target="_blank">
+                   <img src="logo_PPGCIMES.png" alt="Ppgcimes" class="img">
+                </a>
+                <h3><a href="https://www.ppgcimes.propesp.ufpa.br/index.php/br/" target="_blank">Site PPGCIMES</a></h3>
+            </div>
+
+            <div class="box">
+                <a href="https://www.ppgcimes.propesp.ufpa.br/index.php/br/" target="_blank">
+                   <img src="Icons/Nitae.png" alt="Nitae" class="img">
+                </a>
+                <h3><a href="https://nitae.ufpa.br/" target="_blank">Site NITAE</a></h3>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+
+</body>

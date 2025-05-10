@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacinas - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="casos_especioas.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <div class="logo">
+                <img src="../Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="../calendario.html">Calendário</a>
+            <a href="../tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="../esavi.html">ESAVI</a>
+            <a href="../sistema_info.html">Sistema de informações</a>
+            <a href="../quiz/quiz.html">QUIZ</a>
+            <a href="../index.html#contato">Contato</a>
+            <a href="../sobre.html">Sobre</a>
+        </div>
+    </nav>
+   
+    <div id="info_adcionais" class="info-button">
+        <button>Mais informações sobre as vacinas</button>
+    </div>
+    <h1>Casos Especiais</h1>
+
+    <div class="card-container">
+        <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Profissionais da área da saúde</h2>
+          <button class="click">Acesse aqui!</button>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">Vacinas Indicadas:<br>
+            - Tríplice Viral (sarampo, caxumba e rubéola - SCR)<br>
+            - Hepatite A <br> - Hepatite B
+            </p>
+            <p class="explanation-part">- Tríplice bacteriana acelular  do tipo adulto (difteria, tétano e coqueluche)  dTpa ou dTpa -VIP <br> - Varicela (catapora)
+            </p>
+            <p class="explanation-part">- Influenza (gripe)<br>
+                - Meningocócica conjugada  (C ou ACWY)<br>
+                - Meningocócica B
+            </p>
+            
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Profissionais que lidam com alimentos</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Hepatite A <br>
+                - Dupla adulto (difteria e tétano) - dT<br>
+                - Influenza (gripe)
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Militares, policiais e bombeiros</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR)<br>
+                - Hepatite A<br>
+                - Hepatite B
+                </p>
+              <p class="explanation-part">- Tríplice bacteriana acelular  do tipo adulto com poliomielite (dTpa -VIP) ou  Dupla Bacteriana do tipo adulto (dT) <br>
+                - Varicela (catapora) <br>
+                - Influenza (gripe)
+                </p>
+              <p class="explanation-part">- Meningocócica conjugada  (C ou ACWY)<br>
+                - Meningocócica B<br>
+                - Febre Amarela <br>
+                - Raiva <br>
+                - Febre Tifóide
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>
+              Profissionais que lidam comdejetos, águas contaminadas e coletores de lixo
+            </h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Hepatite A <br>
+                - Hepatite B <br>
+                - Dupla Bacteriana do tipo adulto (dT)
+                </p>
+              <p class="explanation-part">
+                - Influenza (gripe) <br>
+                - Febre Tifóide
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Profissionais que trabalham com crianças</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) <br>
+                - Hepatite A
+                </p>
+              <p class="explanation-part">- Tríplice bacteriana acelular  do tipo adulto (dTpa) <br> 
+                - Varicela (catapora) <br>
+                - Influenza (gripe)
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>
+              Profissionais que entram em contato frequente ou ocasional com animais
+            </h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br> 
+                - Dupla bacteriana do tipo adulto (dT) <br>
+                - Raiva <br>
+                - Influenza (gripe)
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Profissionais do sexo</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) <br>
+                - Hepatite A <br>
+                - Hepatite B
+                </p>
+              <p class="explanation-part">
+                - HPV <br>
+                - Varicela (catapora) <br>
+                - Influenza (gripe)
+              </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Profissionais administrativos</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+              - Influenza (gripe)
+              </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Profissionais que viajam muito</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral(sarampo, caxumba e rubéola - SCR) <br>
+                - Hepatite A <br>
+                - Hepatite B <br>
+                </p>
+              <p class="explanation-part">- Tríplice bacteriana acelular  do tipo adulto com poliomielite (dTpa-VIP) <br>
+                - Varicela (catapora)<br>
+                - Influenza (gripe) <br>
+                </p>
+              <p class="explanation-part">- Meningocócicas conjugadas (C ou ACWY) <br>
+                - Meningocócica B <br>
+                - Febre Amarela <br>
+                - Febre Tifóide<br>
+              </p>
+              <p class="explanation-part"> - HPV</p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Manicures, pedicures, podólogos e tatuadores</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Hepatite B <br>
+                - Dupla bacteriana do tipo adulto (dT) <br> 
+                - Influenza (gripe) <br>
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Receptivos de estrangeiros</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) <br>
+                - Hepatite A <br>
+              </p>
+              <p class="explanation-part">
+                - Varicela (catapora) <br>
+                - Influenza (gripe)<br>
+
+              </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Profissionais que trabalham em ambientes de confinamento</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) <br>
+                - Hepatite A <br>
+                - Hepatite B
+                </p>
+              <p class="explanation-part">- Tríplice bacteriana acelular  do tipo adulto (dTpa) <br>
+                - Varicela (catapora)<br>
+                - Influenza (gripe)<br>
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Profissionais e voluntários que atuam em campos de refugiados, situações de catástrofes e ajuda humanitária</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR)<br>
+                - Hepatite A <br>
+                - Hepatite B <br>
+                </p>
+              <p class="explanation-part">- Tríplice bacteriana acelular  do tipo adulto com poliomielite (dTpa-VIP) <br>
+                - Varicela (catapora) <br>
+                - Influenza (gripe) <br>
+                </p>
+              <p class="explanation-part">- Meningocócica conjugada (C ou ACWY) <br>
+                - Meningocócica B <br>
+                - Febre Amarela <br>
+                - Raiva <br>
+                - Febre Tifóide
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Atletas Profissionais</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) <br>
+                - Hepatite A <br>
+                - Hepatite B <br>
+                </p>
+              <p class="explanation-part">- HPV <br>
+                - Tríplice bacteriana acelular  do tipo adulto com poliomielite (dTpa-VIP) e Dupla bacteriana do tipo adulto (dT) <br>
+                - Varicela (catapora)<br>
+                </p>
+              <p class="explanation-part">- Influenza (gripe)<br>
+                - Meningocócica conjugada (C ou ACWY) <br>
+                - Meningocócica B <br>
+                - Febre Amarela <br>
+                </p>
+                <p class="explanation-part">- Dengue <br>
+                  - Raiva <br>
+                  - Febre Tifóide</p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Diabéticos</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) ou SCR-V (Varicela) <br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13) <br>
+                </p>
+              <p class="explanation-part">- Pneumocócica polissacarídica 23-valente (VPP23) <br>
+                - Herpes zóster <br>
+                - Hepatite A <br>
+                - Hepatite B <br>
+                - BCG (recomendada para criança) <br>
+                </p>
+              <p class="explanation-part">- Pólio inativada (VIP) (recomendada para criança) <br>
+                - Tríplice bacteriana acelular  do tipo adulto (difteria, tétano e coqueluche) - dTpa ou dTpa -VIP ou dupla adulto (dT)
+                </p>
+              <p class="explanation-part">- Varicela (catapora) para menores de 7 anos  <br>
+                - Influenza (gripe) <br>
+                - Meningocócica conjugada  (C ou ACWY) <br>
+                </p>
+              <p class="explanation-part">- Meningocócica B <br>
+                - Febre amarela <br>
+                - HPV <br>
+                - Dengue <br>
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Cardiopatia</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) ou SCR-V (Varicela)<br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13)<br>
+                </p>
+              <p class="explanation-part">- Pneumocócica polissacarídica 23-valente (VPP23) <br>
+                - Herpes zóster <br>
+                - Hepatite A <br>
+                - Hepatite B
+              </p>
+              <p class="explanation-part">- BCG (recomendada para criança) <br>
+                - Pólio inativada (VIP) recomendada para criança <br>
+                - Rotavírus (recomendada para crianças) <br>
+                - Haemophilus influenzae b 
+                </p>
+              <p class="explanation-part">- Tríplice bacteriana acelular  do tipo adulto (difteria, tétano e coqueluche) - dTpa ou dTpa -VIP ou dupla adulto (dT) <br>
+                - Varicela (catapora) para menores de 7 anos 
+                </p>
+              <p class="explanation-part">- Influenza (gripe) <br>
+                - Meningocócica conjugada  (C ou ACWY) <br>
+                - Meningocócica B <br>
+                </p>
+              <p class="explanation-part">- Febre amarela <br>
+                - HPV <br>
+                - Dengue
+              </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Hepatopatias Crônicas</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) ou SCR-V (Varicela)<br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13)<br>
+                </p>
+              <p class="explanation-part">- Pneumocócica polissacarídica 23-valente (VPP23)<br>
+                - Herpes zóster <br>
+                - Hepatite A <br>
+                - Hepatite B 
+              </p>
+              <p class="explanation-part">- BCG (recomendada para criança) <br>
+                - Pólio inativada (VIP) recomendada para criança<br>
+                - Rotavírus (recomendada para crianças)<br>
+                </p>
+              <p class="explanation-part">- Haemophilus influenzae b <br>
+                - Tríplice bacteriana acelular  do tipo adulto (difteria, tétano e coqueluche) - dTpa ou dTpa -VIP ou dupla adulto (dT)
+                </p>
+              <p class="explanation-part">- Varicela (catapora) para menores de 7 anos <br>
+                - Influenza (gripe) <br>
+                - Meningocócica conjugada  (C ou ACWY)
+                </p>
+              <p class="explanation-part">- Meningocócica B<br>
+                - Febre amarela <br>
+                - HPV <br>
+                - Dengue
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Doença Renal Crônica</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) ou SCR-V (Varicela) <br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13)
+                </p>
+              <p class="explanation-part">- Pneumocócica polissacarídica 23-valente (VPP23)<br>
+                - Herpes zóster<br>
+                - Hepatite A<br>
+                - Hepatite B
+                </p>
+              <p class="explanation-part">- BCG (recomendada para criança)<br>
+                - Pólio inativada (VIP) recomendada para criança<br>
+                - Rotavírus (recomendada para crianças)
+                </p>
+              <p class="explanation-part">- Haemophilus influenzae b <br>
+                - Tríplice bacteriana acelular  do tipo adulto (difteria, tétano e coqueluche) - dTpa ou dTpa -VIP ou dupla adulto (dT)
+                </p>
+              <p class="explanation-part">- Varicela (catapora) para menores de 7 anos <br>
+                - Influenza (gripe) <br>
+                - Meningocócica conjugada  (C ou ACWY)
+                </p>
+              <p class="explanation-part">- Meningocócica B<br>
+                - Febre amarela<br>
+                - HPV<br>
+                - Dengue
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Asplenia Anatômica ou Funcional</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) ou SCR-V (Varicela)<br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13)<br>
+              </p>
+              <p class="explanation-part">- Pneumocócica polissacarídica 23-valente (VPP23)<br>
+                - Herpes zóster <br>
+                - Hepatite A <br>
+                - Hepatite B <br>
+                - HPV
+
+                </p>
+              <p class="explanation-part">- BCG (recomendada para criança) <br>
+                - Pólio inativada (VIP) recomendada para criança<br>
+                - Rotavírus (recomendada para crianças)<br>
+                - Haemophilus influenzae b 
+                </p>
+              <p class="explanation-part">- ríplice bacteriana acelular  do tipo adulto (difteria, tétano e coqueluche) - dTpa ou dTpa -VIP ou dupla adulto (dT)<Br>
+                - Varicela (catapora) para menores de 7 anos <br>
+                </p>
+              <p class="explanation-part"> - Influenza (gripe)<br>
+                - Meningocócica conjugada  (C ou ACWY) <br>
+                - Meningocócica B <br>
+                - Febre amarela<br>
+                - Dengue
+
+
+              </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Doenças reumatológicas</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) ou SCR-V (Varicela) <br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13)<br>
+                - Dengue
+                </p>
+              <p class="explanation-part">- Pneumocócica polissacarídica 23-valente (VPP23)<br>
+                - Herpes zóster <br>
+                - Hepatite A <br>
+                - Hepatite B <br>
+                - BCG (recomendada para criança)
+                </p>
+              <p class="explanation-part">- Pólio inativada (VIP) recomendada para criança<br>
+                - Rotavírus (recomendada para crianças) <br>
+                - Haemophilus influenzae b <br>
+                - HPV
+
+                </p>
+              <p class="explanation-part">- Tríplice bacteriana acelular  do tipo adulto (difteria, tétano e coqueluche) - dTpa ou dTpa -VIP ou dupla adulto (dT) <br>
+                - Varicela (catapora) para menores de 7 anos 
+                </p>
+              <p class="explanation-part">- Influenza (gripe)<br>
+                - Meningocócica conjugada  (C ou ACWY) <br>
+                - Meningocócica B <br>
+                - Febre amarela
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Crianças e adolescentes com HIV</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Influenza (gripe)<br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) ou SCR-V (Varicela)<br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13)
+                .</p>
+              <p class="explanation-part">- Pneumocócica polissacarídica 23-valente (VPP23)<br>
+                - Herpes zóster <br>
+                - Hepatite A <br>
+                - Hepatite B <br>
+                - HPV
+                </p>
+              <p class="explanation-part">- BCG (recomendada para criança) <br>
+                - Pólio inativada (VIP) recomendada para criança <br>
+                - Rotavírus (recomendada para crianças) <br>
+                - Haemophilus influenzae b 
+                </p>
+              <p class="explanation-part">
+                - Tríplice bacteriana (DTPw ou DTPa) e suas combinações,  ou tríplice bacteriana do tipo adulto (dTpa e dTpa-VIP) ou dupla adulto (dT)<br>
+              </p>
+              <p class="explanation-part">- Varicela (catapora) para menores de 7 anos <br>
+                - Meningocócica conjugada  (C ou ACWY) <br>
+                - Meningocócica B <br>
+                - Febre amarela
+
+              </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Adultos e idosos HIV</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) ou SCR-V (Varicela) <br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13)<br>
+                - HPV
+                </p>
+              <p class="explanation-part">- Pneumocócica polissacarídica 23-valente (VPP23)<br>
+                - Herpes zóster <br>
+                - Hepatite A <br>
+                - Hepatite B <br>
+                - BCG (recomendada para criança)
+                </p>
+              <p class="explanation-part">- Pólio inativada (VIP) recomendada para criança <br>
+                - Rotavírus (recomendada para crianças) <br>
+                - Haemophilus influenzae b 
+                </p>
+              <p class="explanation-part">- Tríplice bacteriana acelular  do tipo adulto (difteria, tétano e coqueluche) - dTpa ou dTpa -VIP ou dupla adulto (dT)<br>
+                - Varicela (catapora) 
+              </p>
+              <p class="explanation-part">- Influenza (gripe)<br>
+                - Meningocócica conjugada  (C ou ACWY) <br>
+                - Meningocócica B <br>
+                - Febre amarela
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Imunodeficiência Primária</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) ou SCR-V (Varicela) <br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13) <br>
+                - HPV
+              </p>
+              <p class="explanation-part">- neumocócica polissacarídica 23-valente (VPP23) <br>
+                - Herpes zóster <br>
+                - Hepatite A <br>
+                - Hepatite B <br>
+              </p>
+              <p class="explanation-part">- BCG (recomendada para criança)<br>
+                - Rotavírus (recomendada para crianças) <br>
+                - Haemophilus influenzae b <br>
+                - Varicela (catapora) para menores de 7 anos 
+              </p>
+              <p class="explanation-part">- Tríplice bacteriana (DTPw ou DTPa) e suas combinações,  ou tríplice bacteriana do tipo adulto (dTpa e dTpa-VIP) ou dupla adulto (dT) <br>
+                - Influenza (gripe)
+                </p>
+              <p class="explanation-part">- Meningocócica conjugada  (C ou ACWY)<br>
+                - Meningocócica B <br>
+                - Febre amarela 
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Neoplasias</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13) <br>
+                - Pneumocócica polissacarídica 23-valente (VPP23)
+
+              </p>
+              <p class="explanation-part">Hepatite A<br>
+                - Hepatite B <br>
+                - Pólio inativada (VIP) recomendada para criança <br>
+                - Haemophilus influenzae b 
+                </p>
+              <p class="explanation-part">- Tríplice bacteriana (DTPw ou DTPa) e suas combinações,  ou tríplice bacteriana do tipo adulto (dTpa e dTpa-VIP) ou dupla adulto (dT)</p>
+              <p class="explanation-part">- Influenza (gripe) <br>
+                - Meningocócica conjugada  (C ou ACWY) <br>
+                - Meningocócica B <br>
+                - HPV
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Transplante de Órgãos Sólidos</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) <br>
+                - Pneumocócicas conjugadas (VPC10 ou VPC13)
+                </p>
+              <p class="explanation-part">- Pneumocócica polissacarídica 23-valente (VPP23)<br>
+                - Herpes zóster <br>
+                - Hepatite A <br>
+                - Hepatite B
+                </p>
+              <p class="explanation-part">- Pólio inativada (VIP) recomendada para criança<br>
+                - Haemophilus influenzae b <br>
+                - Pólio inativada (VIP) recomendada para criança  
+                </p>
+              <p class="explanation-part">- Tríplice bacteriana (DTPw ou DTPa) ou tríplice bacteriana do tipo adulto (dTpa) e suas combinações <br>
+                - Influenza (gripe)
+              </p>
+              <p class="explanation-part">- Meningocócica conjugada  (C ou ACWY)<br>
+                - Meningocócica B <br>
+                - Febre amarela <br>
+                - HPV
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+          <div class="card-front">
+            <h2>Células Tronco Hematopoiéticas</h2>
+            <button class="click">Acesse aqui!</button>
+          </div>
+          <div class="card-back">
+            <div class="text-content">
+              <p class="explanation-part">Vacinas Indicadas: <br>
+                - Tríplice Viral (sarampo, caxumba e rubéola - SCR) <br> 
+                - Pneumocócicas conjugadas (VPC10 ou VPC13)
+                </p>
+              <p class="explanation-part">- Pneumocócica polissacarídica 23-valente (VPP23)<br>
+                - Herpes zóster <br>
+                - Hepatite A <br>
+                - Hepatite B
+                .</p>
+              <p class="explanation-part">- BCG (recomendada para criança)<br>
+                - Pólio inativada (VIP) recomendada para criança <br>
+                - Rotavírus (recomendada para crianças)
+                </p>
+              <p class="explanation-part">- Haemophilus influenzae b <br>
+                - Tríplice bacteriana acelular (DTPa) ou tríplice bacteriana do tipo adulto (dTpa) e suas combinações ou dupla adulto (dT)
+                </p>
+              <p class="explanation-part">- Varicela (catapora) para menores de 7 anos <br>
+                - Influenza (gripe) <br>
+                - Meningocócica conjugada  (C ou ACWY) <br>
+                </p>
+                <p class="explanation-part"> - Meningocócica B<br>
+                  - Febre amarela<br>
+                  - HPV
+
+                </p>
+            </div>
+            <div class="navigation-buttons">
+              <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+              <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+            </div>
+          </div>
+        </div>
+             
+       </div>
+
+    <script src="casos_especias.js"></script>   
+
+
+</body>

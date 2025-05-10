@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esavi - VacinAÇÃOsegura</title>
+  <link rel="stylesheet" href="esavi.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">
+            <div class="logo">
+                <img src="Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="calendario.html">Calendário</a>
+            <a href="tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="esavi.html">ESAVI</a>
+            <a href="sistema_info.html">Sistemas de informações</a>
+            <a href="quiz/quiz.html">QUIZ</a>
+            <a href="index.html#contato">Contato</a>
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </nav>
+    <div class="container">
+      <h1 class="title">Esavi - Eventos Supostamente atribuiveís a Vacinação ou Imunização</h1>
+
+     <div class="text-section">
+        <div class="column">
+            <p>As vacinas demandam um nível muito alto de segurança. Deste modo, o objetivo da farmacovigilância de vacinas é a detecção oportuna e o provimento de resposta adequada, e rápida, aos Eventos Supostamente Atribuíveis à Vacinação ou Imunização (ESAVI), de modo a minimizar os efeitos negativos na saúde das pessoas, além de diminuir um potencial impacto nos programas de imunização (Brasil, 2020).</p>  
+        </div>
+        <div class="column">
+           <p>ESAVI é um evento supostamente atribuível à vacinação ou imunização, antes conhecido como evento adverso pós-vacinação (EAPV) – Nota Técnica CGPNI/DEIDT/SVS/MS nº 255/2022. Trata-se de qualquer evento de saúde (sinal, sintoma, achado laboratorial anormal ou doença) desfavorável e indesejado, que ocorre após a vacinação ou imunização, e que não tem necessariamente uma relação causal com o processo de vacinação ou com a vacina (WORLD HEALTH ORGANIZATION, 2014).
+          </p>
+        </div>
+
+        <div class="column">
+            <p>Como qualquer intervenção de saúde, existem riscos intrínsecos às tecnologias, e a interação das vacinas com o corpo humano pode gerar respostas indesejadas, descobertas durante o processo de pesquisa clínica ou uso em massa na população. Também podem acontecer defeitos de fabricação, ou de qualquer outra natureza, que afetam a qualidade da vacina e podem aumentar o risco de reações adversas.
+            </p>
+        </div>
+     </div>
+     <div class="card-container">
+      <div class="card" onclick="toggleCard(this)">
+      <div class="card-front">
+        <h2>Classificação quanto ao tipo de manifestação</h2>
+      </div>
+      <div class="card-back">
+        <div class="text-content">
+          <p class="explanation-part">
+            Os ESAVI podem ser classificados quanto ao tipo de manifestação em locais ou sistêmicos (BRASIL, 2020a). Na vacinação, a própria introdução da agulha já pode irritar o local de aplicação.  </p>
+          <p class="explanation-part">Dor no local da aplicação é um dos ESAVI locais mais comuns. Já entre as manifestações sistêmicas, a febre é a mais comum, que ocorre principalmente nas primeiras 24 horas depois da administração da vacina.<br>
+          </p>
+          <p class="explanation-part">Efeito (ou reação) adversa:<br>
+             ocorre quando é estabelecida uma relação causal possível e razoável entre um medicamento (ou vacina) e um evento adverso.</p>
+          <p class="explanation-part">Evento adverso (ou ESAVI):<br> 
+            ocorrência médica desfavorável e indesejada após o uso de um medicamento (ou vacina) e que não há, necessariamente, uma relação causal estabelecida entre o produto e o evento.</p>
+          <p class="explanation-part">Ou seja, toda reação adversa um dia foi um evento adverso, mas nem todo evento adverso um dia será uma reação adversa!</p>
+        </div>
+        <div class="navigation-buttons">
+          <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+          <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+        </div>
+      </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Classificados em relação à severidade <br>(Parte I)</h2>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">ESAVI grave é qualquer evento clinicamente relevante que atende um ou mais dos critérios a seguir:<br>
+            </p>
+            <p class="explanation-part"> ° Tenha envolvido hospitalização.<br>
+              ° Possa comprometer o paciente, ou seja, que ocasione risco de morte e que exija intervenção clínica imediata para evitar o óbito.</p>
+            <p class="explanation-part">° Cause disfunção significativa e/ou incapacidade permanente.<br>
+              ° Resultou em anomalia congênita.<br>
+              ° Ocasione o óbito.<br>
+              ° Suspeito de provocar aborto.
+            </p>
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Classificados em relação à severidade (Parte II)</h2>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">Os ESAVI não graves são quaisquer outros eventos que não estejam incluídos nos critérios de ESAVI graves. Eles não representam risco potencial para a saúde do vacinado, mas também devem ser cuidadosamente monitorados, pois podem 
+            </p>
+            <p class="explanation-part">sinalizar um problema potencialmente maior em relação à vacina ou à imunização, ou ter um impacto acerca da aceitabilidade da imunização em geral.</p>
+            <p class="explanation-part">Diferente da gravidade, a classificação de intensidade de um ESAVI tem relação com o grau de comprometimento nas atividades diárias do paciente e não com seu desfecho. </p>
+            <p class="explanation-part">Um ESAVI pode ser classificado quanto à intensidade em leve, moderado ou intenso.
+            </p>
+            <p class="explanation-part">Um evento pode ser intenso (por exemplo, dor de cabeça que necessite de analgesia potente) e não ser grave (não resultou em internação, por exemplo).</p>
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Classificados conforme a relação causal com a vacina <br>(Parte I)</h2>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">Os ESAVI podem ainda ser divididos em alguns tipos e classificados conforme a relação causal com a vacina ou a vacinação (BRASIL, 2020a). </p>
+            <p class="explanation-part">Eventos relacionados à vacina ou qualquer um de seus componentes:<br> 
+              ESAVI causados ou precipitados pela vacina ou por um ou mais de seus componentes, que incluem o imunógeno (que provoca a resposta imune) e outros</p>
+            <p class="explanation-part">que podem estar presentes, como os adjuvantes, preservativos e outros aditivos utilizados durante o processo de produção, responsáveis pela qualidade/estabilidade (sais de sódio ou potássio, albumina, gelatina), crescimento e purificação dos
+            </p>
+            <p class="explanation-part">imunógenos (proteínas do ovo, leveduras, antibióticos) ou inativação de toxinas (formaldeído).</p>
+            <p class="explanation-part">Eventos relacionados a desvios de qualidade: <br>
+              ESAVI causados ou precipitados por desvio (alteração) de qualidade de uma vacina, incluem as embalagens (ampolas, frascos, frasco-ampola, etc.)
+            </p>
+            <p class="explanation-part">e acessórios (agulhas, conta-gotas, diluente, seringas, etc.) utilizados em sua administração.</p>
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Classificados conforme a relação causal com a vacina (Parte II)</h2>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">Eventos relacionados a erros de imunização:<br> ESAVI causados por manuseio, prescrições e/ou administração inadequados, sendo, portanto, preveníveis.
+            </p>
+            <p class="explanation-part">° Eventos relacionados ao processo de vacinação (ansiedade): ESAVI motivados por ansiedade em relação ao processo de vacinação. Incluem síncopes vasovagais, reações de hiperventilação ou reações consequentes a desordens psiquiátricas</p>
+            <p class="explanation-part">° Eventos coincidentes, ou seja, apenas associações temporais:<br> Eventos causados por outro(s) motivo(s) que não o produto (vacina). Condições emergentes coincidentes à vacinação.</p>
+            <p class="explanation-part">° Eventos inclassificáveis:<br> Aqueles dos quais não se dispõe de informações suficientes para a categorização.</p>
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Erros de imunização</h2>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">Os erros no processo de vacinação podem ocorrer. Portanto, um dos maiores desafios dos serviços de saúde que atuam na vacinação é assegurar as boas práticas de vacinação segura.
+            </p>
+            <p class="explanation-part"> As práticas adequadas, desde  o produtor até a administração de vacinas, soros e imunoglobulinas, garantem o sucesso e a credibilidade dos programas de imunização.</p>
+            <p class="explanation-part">O erro de imunização é qualquer evento evitável que pode causar ou levar a um uso inapropriado de vacinas, ou outros imunobiológicos; ou acarretar dano a uma pessoa enquanto o produto está sob o controle de profissionais de saúde.</p>
+            <p class="explanation-part">Pode estar relacionado com a prática profissional, com os produtos para a saúde, com procedimentos ou sistemas, que incluem prescrição, orientação verbal, rotulagem, embalagem e 
+            </p>
+            <p class="explanation-part">nomenclatura de produtos industrializados e manipulados, dispensação, distribuição, administração, educação, monitorização e uso.</p>
+            <p class="explanation-part">No âmbito da farmacovigilância, os erros de imunização de maior relevância são aqueles que geram risco para ocorrência de ESAVI ou que diminuem a efetividade da vacina administrada. </p>
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Farmacovigilância de vacinas no Brasil <br>(Parte I)</h2>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">A prevenção em saúde pública pode ser definida em vários níveis, com os seguintes objetivos da vacinação:<br></p>
+            <p class="explanation-part">1) prevenir a ocorrência da doença (prevenção primária); <br>
+              2) reverter, interromper ou, pelo menos, limitar a evolução de uma doença (prevenção secundária); </p>
+            <p class="explanation-part">3) minimizar os efeitos da doença (incapacidade, sequelas, etc.) entre aqueles que adoeceram (prevenção terciária).
+            </p>
+            <p class="explanation-part">Doenças que ceifavam a vida de milhares de pessoas, anualmente, principalmente durante a infância, como o sarampo, a rubéola, o tétano, a coqueluche, a poliomielite, entre outras, foram rapidamente controladas e até eliminadas após a introdução </p>
+            <p class="explanation-part">das vacinas e a vacinação em massa da população brasileira.<br>
+              O sucesso do PNI pode ser medido pela redução da mortalidade infantil por doenças imunopreveníveis e o aumento da expectativa de vida dos brasileiros. </p>
+            <p class="explanation-part">Contudo, as coberturas vacinais passaram a reduzir a partir de 2016 no Brasil, mas principalmente durante a pandemia de COVID-19 (2020-22), com resultados no acúmulo de pessoas suscetíveis e, por conseguinte, aumento do</p>
+            <p class="explanation-part">risco para reintrodução e/ou disseminação de doenças e mortes em todo o país.<br> 
+              As doenças que deixaram de ocorrer ou passaram a ser raras ou esporádicas (casos importados, por exemplo) devido ao sucesso da vacinação não podem ser</p>
+            <p class="explanation-part">consideradas "sem importância" pela população, que passou a valorizar e se preocupar, ainda mais, com a ocorrência de ESAVI.<br>
+              A relevância dessas doenças, que continuam circulando em outras partes do mundo,
+            </p>
+            <p class="explanation-part">inclusive em países fronteiriços ao Brasil, devem ser avaliadas à luz do seu potencial para ressurgir e causar danos individuais e coletivos. Neste sentido, o PNI tem realizado diversos esforços 
+            </p>
+            <p class="explanation-part">para recuperar elevadas coberturas vacinais e introduzir novas vacinas de importância para a saúde pública brasileira.</p>
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Farmacovigilância de vacinas no Brasil <br>(Parte II)</h2>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">Assim, tornou-se fundamental o estabelecimento de um Sistema Nacional de Vigilância (SNV) de Eventos Supostamente Atribuíveis à Vacinação ou Imunização (ESAVI), que iniciou pelo PNI do Ministério da Saúde, em 1992.
+            </p>
+            <p class="explanation-part">A notificação compulsória de ESAVI grave, incluindo os eventos fatais, ocorridos até 30 dias após a vacinação, foi instituída em 15 de julho de 2005 (Portaria MS/GM Nº 33/2005) e permanece até hoje (Portaria de Consolidação Nº 4/2017 – Anexo 1 do Anexo 5).
+            </p>
+            <p class="explanation-part">– Anexo 1 do Anexo 5).<br>
+              A capacitação das equipes municipais e estaduais envolvidas nas ações de imunização tem sido essencial para aumentar a sensibilidade do sistema na captação de casos de ESAVI.
+            </p>
+            <p class="explanation-part">A necessidade de orientar e padronizar a notificação e investigação dos casos de ESAVI levou o Ministério da Saúde a publicar, em 1998, a primeira edição do Manual de Vigilância Epidemiológica de Eventos Adversos Pós-Vacinação, que está 
+            </p>
+            <p class="explanation-part">na 4ª edição, publicada em 2020.<br>
+              Em 2000, foi implantado o Sistema de Informações (SI) do PNI um módulo para o registro das notificações e investigações de ESAVI. Depois, foi implantado
+            </p>
+            <p class="explanation-part">o Sistema Nacional de Vigilância Sanitária (Notivisa) na plataforma WEB (internet) para receber as notificações de eventos adversos e queixas técnicas relacionados aos produtos de uso humano em 2007, com a inclusão das vacinas e imunoglobulinas.</p>
+            <p class="explanation-part">Esse sistema foi substituído pelo VigiMed em 2018, para automatizar o envio de informações a respeito da segurança de medicamentos e vacinas para a OMS.
+            </p>
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Farmacovigilância de vacinas no Brasil <br>(Parte III)</h2>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">Ato contínuo, o Módulo ESAVI passou do SI-PNI para o e-SUS Notifica em 2021, que é um sistema online e acessível para qualquer profissional de saúde, por meio de um autocadastro, independentemente do tipo de serviço em saúde que esteja
+            </p>
+            <p class="explanation-part"> vinculado, para realizar o registro da notificação e da investigação dos casos de ESAVI.<br>
+              Além disso, o e-SUS Notifica (módulo ESAVI) foi construído com base no MedDRA (Medical Dictionary for Regulatory Activities),
+            </p>
+            <p class="explanation-part">uma terminologia médica internacional padronizada para facilitar o compartilhamento mundial de informações, também adotada no sistema VigiMed.
+            </p>
+            <p class="explanation-part">Atualmente, o uso de sistemas online e a compatibilidade de termos entre eles, permite a revisão da operacionalização do SNV-ESAVI, para cumprir os princípios do Sistema Único de Saúde (SUS) no âmbito das ações de vigilância em </p>
+            <p class="explanation-part">saúde, principalmente a universalidade, a integralidade e a equidade, mas também a racionalidade, a eficiência e a transparência. É importante ressaltar que a ANVISA tem acesso aos dados do e-SUS Notifica (módulo ESAVI)</p>
+            <p class="explanation-part">de todo o país e desempenha seu papel fundamental como representante nacional de farmacovigilância junto à OMS. Os dados coletados pela ANVISA são compartilhados com o Centro de Monitoramento de Uppsala, uma fundação </p>
+            <p class="explanation-part">independente e sem fins lucrativos instituída pela OMS em 1978. <br>
+              Diante disso, faz-se necessário destacar que a vigilância epidemiológica e a sanitária, apesar de distintas, são complementares no âmbito do SNV-ESAVI.
+            </p>
+            <p class="explanation-part">Enquanto a vigilância epidemiológica tem como população alvo as pessoas vacinadas, a vigilância sanitária tem como foco os produtos e serviços de uso humano.
+            </p>
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Farmacovigilância de vacinas no Brasil <br>(Parte IV)</h2>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">Outras informações que se deve ter em mente a respeito da farmacovigilância de vacinas são: <br>
+              ° As vacinas, geralmente, são administradas a pessoas saudáveis, e incluem as crianças.
+            </p>
+            <p class="explanation-part">° As vacinas podem ser administradas em uma coorte de pessoas, em grupos de alto risco para complicações de uma doença ou em toda a população.<br>
+              ° Algumas subpopulações podem ser mais suscetíveis a apresentar certos ESAVI.
+            </p>
+            <p class="explanation-part">° A idade no momento da imunização pode coincidir com o surgimento de certas doenças relacionadas à faixa etária, como, por exemplo, transtornos no neurodesenvolvimento.<br>
+            </p>
+            <p class="explanation-part">° A imunização com certas vacinas é obrigatória em alguns países.<br>
+              ° Devido à baixa aceitação de riscos, a investigação rigorosa de ESAVI, mesmo que raros, é necessária.
+              </p>
+            <p class="explanation-part">° Os ESAVI não graves devem, também, ser cuidadosamente monitorados, pois podem sinalizar algum problema potencialmente maior em relação à vacina ou à imunização, ou, ainda, ter impacto a respeito da aceitabilidade da imunização em geral.
+            </p>
+            <p class="explanation-part">° O monitoramento de ESAVI não graves, particularmente de reações locais e febre, pode servir para detectar problemas com lotes específicos de vacina.
+            </p>
+            <p class="explanation-part">° São necessários métodos apropriados para detectar e avaliar qualquer potencial associação causal de eventos adversos graves, raros e/ou inusitados e de eventos adversos que ocorram em subgrupos (surtos).
+            </p>
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">
+          <h2>Farmacovigilância de vacinas no Brasil <br>(Parte V)</h2>
+        </div>
+        <div class="card-back">
+          <div class="text-content">
+            <p class="explanation-part">Outras informações que se deve ter em mente a respeito da farmacovigilância de vacinas são (Continuação):
+            </p>
+            <p class="explanation-part">° Vacinas são frequentemente administradas apenas uma vez, ou com intervalos longos, e os ESAVI graves muitas vezes impedem a administração de vacinas adicionais.
+            </p>
+            <p class="explanation-part">° Há vacinas que são frequentemente administradas concomitantemente a outras vacinas, que dificultam a atribuição causal a uma vacina específica.
+            </p>
+            <p class="explanation-part">° A administração de vacinas vivas pode levar a doenças causadas pelos organismos atenuados nos vacinados ou seus contatos, e necessitar da diferenciação da infecção natural coincidente.</p>
+            <p class="explanation-part">° As vacinas são produtos biológicos complexos, que podem incluir múltiplos antígenos, organismos vivos, adjuvantes e conservantes. Cada componente pode ter implicações de segurança únicas. Variabilidade e mudanças (mesmo pequenas) no processo de fabricação podem ter impacto na qualidade, no efeito protetor e na segurança.</p>
+            <p class="explanation-part"> Portanto, a informação do lote é de importância crucial.<br>
+              ° As novas vacinas baseiam-se cada vez mais em novas tecnologias, com novos adjuvantes e sítios alternativos de administração, e necessitam de   
+            </p>
+            <p class="explanation-part">sistemas de monitoramento de seguranças adaptados.<br>
+              ° A depender do modo e da extensão do uso de uma vacina, ela pode provocar imunidade de rebanho para uma doença específica, portanto, ao se avaliar o risco-benefício de uma vacina, 
+            </p>
+            <p class="explanation-part">proteções individuais e coletivas devem ser consideradas.<br>
+              ° Uma comunicação efetiva a respeito da segurança de vacinas é desafiadora. Apesar das fortes evidências de que um evento adverso grave não está́ relacionado à imunização, percepções de danos podem persistir e, potencialmente, ter impacto negativo na imunização da população.
+            </p>
+            <p class="explanation-part">imunização, percepções de danos podem persistir e, potencialmente, ter impacto negativo na imunização da população.
+            </p>
+          </div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" onclick="prevPart(event)">Anterior</button>
+            <button class="next-btn" onclick="nextPart(event)">Próximo</button>
+          </div>
+        </div>
+      </div>
+     
+           
+     </div>
+    </div>
+  <script src="esavi.js"></script>
+</body>
+</html>

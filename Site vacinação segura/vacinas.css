@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 30px 40px 10px 40px;
+}
+
+.seta { 
+    position: fixed; 
+    top: 50%; 
+    right: 50px; 
+    transform: translateY(-70%); 
+    width: 50px; 
+    height: 50px; 
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    padding-top: 30px;
+    box-shadow: 0px 4px 6px rgba(64, 64, 67, 0.1);
+}
+
+.info-button {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.info-button button {
+    background-color: #1f419a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 30px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.vacina-image {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    background-color: #aaa;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+.navbar .menu a {
+    text-decoration: none;
+    color: #292929;
+    font-size: 16px;
+}
+.navbar .menu a:hover {
+    color: #c5c510;
+}
+.navbar .auth-buttons {
+    display: flex;
+    gap: 10px;
+}

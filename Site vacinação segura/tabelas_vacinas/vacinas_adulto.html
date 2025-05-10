@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacinas - VacinAÇÃOsegura</title>
+    <link rel="stylesheet" href="adulto.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <div class="logo">
+                <img src="../Logo_Vacinacao.png" alt="Logo Vacinação" style="height: 50px;">
+            </div>
+        </a>
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="../calendario.html">Calendário</a>
+            <a href="../tecnicas_vacinacao.html">Tecnicas</a>
+            <a href="../esavi.html">ESAVI</a>
+            <a href="../sistema_info.html">Sistemas de informações</a>
+            <a href="../quiz/quiz.html">QUIZ</a>
+            <a href="../index.html#contato">Contato</a>
+            <a href="../sobre.html">Sobre</a>
+        </div>
+    </nav>
+    <div class="container">
+        <table>
+            <div id="info_adcionais" class="info-button">
+                <button>Mais informações sobre as vacinas</button>
+            </div>
+            <h1>Calendário de Vacinação para Adultos e Idosos</h1>
+            <thead>
+                <tr>
+                    <th>Vacina</th>
+                    <th>Proteção Contra</th>
+                    <th>Composição</th>
+                    <th>Esquema báisco</th>
+                    <th>Reforço</th>
+                    <th>Idade Recomendada</th>
+                    <th>Intervalo recomendado</th>
+                    <th>Intervalo mínimo</th>
+                    <th>Volume da Dose</th>
+                    <th>Via de Administração</th>
+                    <th>Local da Aplicação</th>
+                    <th>Agulha Hipodérmica Recomendada (dec/mm)</th>
+                </tr>
+                
+            </thead>
+            <tody>
+                <tr>
+                    <td>Hepatite B recombinante</td>
+                    <td>Hepatite B</td>
+                    <td>Antígeno recombinante de superfície do vírus purificado</td>
+                    <td>3 doses (iniciar ou completar o esquema, de acordo com situação vacinal)</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>2ª dose: 1 mês após 1ª dose, 3ª dose 6 meses após 1ª dose</td>
+                    <td>2° dose 1 mês após a 1°. 3° dosse 4 meses após a 1° dose</td>
+                    <td>0,5mL ou 1mL a depender do fabricante e/ou da idade que será administrada</td>
+                    <td>Intramuscular</td>
+                    <td>Músculo deltoide, ventroglúteo e vastolateral da coxa</td>
+                    <td>20x5,5<br>25x6<br>25x7<br>30x7</td>
+                </tr>
+                <tr>
+                    <td>Difteria e Tétano (dT)</td>
+                    <td>Difteria e Tétano</td>
+                    <td>Toxoides diftérico e tetânico purificados, inativada</td>
+                    <td>3 doses (iniciar ou completar o esquema, de acordo com situação vacinal)</td>
+                    <td>A cada 10 anos. Em caso de ferimentos graves a cada 5 anos</td>
+                    <td>-</td>
+                    <td>60 dias</td>
+                    <td>30 dias</td>
+                    <td>0,5mL</td>
+                    <td>Intramuscular</td>
+                    <td>Músculo deltoide, vasto lateral da coxa, dorsoglúteo ou ventroglúteo</td>
+                    <td>20x5,5<br>25x6<br>25x7</td>
+                </tr>
+                <tr>
+                    <td>Febre Amarela (Atenuada)</td>
+                    <td>Febre Amarela</td>
+                    <td>Vírus vivo atenuado</td>
+                    <td>Dose única, para pessoas que nunca foram vacinadas ou sem comprovante de vacinação</td>
+                    <td>Reforço, caso a pessoa tenha recebido uma dose da vacina antes de completar 5 anos de idade</td>
+                    <td>Para pessoas até 59 anos de idade, não vacinadas</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Subcutânea</td>
+                    <td>Músculo deltoide</td>
+                    <td>13x4,5</td>
+                </tr>
+                <tr>
+                    <td>Sarampo, Caxumba e Rubéola (SCR)</td>
+                    <td>Sarampo, Caxumba e Rubéola</td>
+                    <td>Vírus vivo atenuado</td>
+                    <td>2 doses (20 a 29 anos) 1 dose (30 a 59 anos) (verificar situação vacinal anterior)</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>30 dias</td>
+                    <td>0,5mL</td>
+                    <td>Subcutânea</td>
+                    <td>Músculo deltoide</td>
+                    <td>13x4,5</td>
+                </tr>
+                <tr>
+                    <td>Pneumocócica 23-valente (PPV 23)</td>
+                    <td>Meningite, Sepse Pneumonias, Sinusite, Otite e Bronquite</td>
+                    <td>Polissacarídeo capsular de 23 sorotipos pneumocócicos</td>
+                    <td>1 Dose</td>
+                    <td>1 dose deve ser feita 5 anos após a primeira dose</td>
+                    <td>60 anos (acamados ou institucionalizados)</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>0,5mL</td>
+                    <td>Intramuscular</td>
+                    <td>Músculo deltoide, ventroglúteo, dorsoglúteo e vastolateral da coxa</td>
+                    <td>20x5,5<br>25x6<br>25x7</td>
+                </tr>
+            </tody>
+        </table>
+    </div>
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+});
+
+        document.getElementById("info_adcionais").onclick = function() {
+        window.location.href = "../info_adicionais.html";
+        };
+   </script>
+</body>
+</html>
