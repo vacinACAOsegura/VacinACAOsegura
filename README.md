@@ -13,4 +13,3 @@ O desenvolvimento deste ambiente virtual representou não apenas uma aplicação
 
 🔗 Acesse o projeto:  
 [https://vacinacaosegura.github.io/VacinACAOsegura/index.html](https://vacinacaosegura.github.io/VacinACAOsegura/index.html)
-vacinacaosegura.github.io/VacinACAOsegura/index.html 
